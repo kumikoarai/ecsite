@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.webjars:jquery:3.5.0'
+	implementation 'org.webjars:bootstrap:4.4.1-1'
+	implementation group: 'org.webjars', name: 'datatables', version: '1.10.21'
+	runtimeOnly group: 'org.webjars', name: 'datatables-plugins', version: '1.10.21'
+	implementation 'org.modelmapper:modelmapper:2.3.9'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

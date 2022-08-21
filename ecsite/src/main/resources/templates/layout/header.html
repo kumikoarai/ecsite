@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<header layout:fragment="header" class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{'/top'}">ECサイト</a>
+			</div>
+			<a class="btn btn-link pull-right navbar-brand" th:href="@{'/login'}">ログイン</a>
+		</div>
+	</header>
+</body>
+</html>

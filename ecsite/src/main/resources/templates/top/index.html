@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/layout}">
+<head>
+<meta charset="UTF-8">
+<title>ECサイト/TOP</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/top/top.js}" defer></script>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1 class="h2">商品一覧</h1>
+		<section>
+			<!-- 検索 -->
+			<div class="mb-4">
+				<form id="product_saerch_form" class="form-inline" th:object="${topProductListForm}">
+					<div class="form-group">
+						<input type="text" class="form-control" th:field="*{productName}">
+					</div>
+					<button id="btn-search" class="btn btn-primary ml-3" type="button">検索</button>
+				</form>
+			</div>
+		</section>
+		<section>
+				<ul id="product_ul">
+					<th:block th:each="item: ${productList}">
+						<li><img th:src="@{'' + ${item.productImage} + ''}"><p th:text="${item.productName}"></p></li>
+					</th:block>
+				</ul>
+		</section>
+	</div>
+</body>
+</html>
