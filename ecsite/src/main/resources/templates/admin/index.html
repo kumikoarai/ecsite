@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>ECサイト/TOP</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/top/top.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">管理者トップページ</h1>
+		</section>
+	</th:block>
+</body>
+</html>

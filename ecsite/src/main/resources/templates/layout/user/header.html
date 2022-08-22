@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<header layout:fragment="header" class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{'/user/index'}">ECサイト</a>
+			</div>
+			<a class="btn btn-link pull-right navbar-brand" th:href="@{'/login'}">カート</a>
+			<a class="btn btn-link pull-right navbar-brand" th:href="@{'/login'}">編集</a>
+			<form th:action="@{'/user/logout'}" method="post">
+			<input type="submit" class="btn btn-link pull-right navbar-brand" value="ログアウト">
+			</form>
+		</div>
+	</header>
+</body>
+</html>

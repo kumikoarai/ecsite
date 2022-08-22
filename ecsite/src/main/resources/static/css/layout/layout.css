@@ -17,3 +17,7 @@
 	overflow-y: auto;
 	height: calc(100vh - 58px);
 }
+
+nav li {
+	width: 100%;
+}

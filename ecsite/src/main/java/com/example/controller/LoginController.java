@@ -11,4 +11,18 @@ public class LoginController {
 		return "login/login";
 	}
 
+	@GetMapping("/user/login")
+	public String getUserLoginPage() {
+		return "redirect:/user/index";
+	}
+
+	@GetMapping("/admin/login")
+	public String getAdminLoginPage() {
+		return "login/login_admin";
+	}
+
+	@GetMapping("/admin/login/login")
+	public String getAdminPage() {
+		return "redirect:/admin/index";
+	}
 }

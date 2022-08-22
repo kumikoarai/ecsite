@@ -4,21 +4,21 @@
  layout:decorate="~{layout/login/layout}">
 <head>
 <meta charset="UTF-8">
-<title>ログイン・新規登録 / ECサイト</title>
+<title>管理者ログイン / ECサイト</title>
 <link th:href="@{/css/login/login.css}" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 	<section layout:fragment="content">
 		<section id="form_section">
-			<form th:action="@{/user/login}" method="POST">
+			<form th:action="@{/admin/login/login}" method="POST">
 				<fieldset>
-					<legend>ログイン</legend>
-					<p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
+					<legend>管理者ログイン</legend>
+					<!-- <p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
 					 th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"
 					 class="text-danger">
 					 ログインエラーメッセージ
-					</p>
+					</p> -->
 					<label for="userId">ユーザーID(メールアドレス):</label>
 					<input type="text" class="form-control" placeholder="ユーザーID（メールアドレス）" name="userId">
 					<label for="password">パスワード:</label>
@@ -26,21 +26,6 @@
 				</fieldset>
 				<input type="submit" value="ログイン" class="btn btn-primary">
 			</form>
-			<form>
-				<fieldset>
-					<legend>新規登録</legend>
-					<label for="userId">メールアドレス:</label>
-					<input type="text" class="form-control" placeholder="メールアドレス" name="userId">
-					<label for="password">パスワード:</label>
-					<input type="password" class="form-control" placeholder="パスワード" name="password">
-					<label for="userName">氏名:</label>
-					<input type="text" class="form-control" placeholder="氏名" name="userName">
-				</fieldset>
-				<input type="submit" value="新規登録" class="btn btn-primary">
-			</form>
-		</section>
-		<section id="admin_section">
-			<p><a th:href="@{/admin/login}">管理者ログインはこちら</a></p>
 		</section>
 	</section>
 </body>
