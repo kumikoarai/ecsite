@@ -32,13 +32,17 @@ public class UserSecurityConfig {
             PasswordEncoder encoder = passwordEncoder();
             UserDetails user = User.withUsername("user")
                             .password(encoder.encode("user"))
-                            .roles("GENERAL")
+                            .roles("ENDUSER")
                             .build();
             UserDetails admin = User.withUsername("admin")
                             .password(encoder.encode("admin"))
                             .roles("ADMIN")
                             .build();
-            return new InMemoryUserDetailsManager(user, admin);
+            UserDetails admin_gene = User.withUsername("admin_gene")
+		                    .password(encoder.encode("admin_gene"))
+		                    .roles("GENERAL")
+		                    .build();
+            return new InMemoryUserDetailsManager(user, admin, admin_gene);
     }
 
 
@@ -67,6 +71,7 @@ public class UserSecurityConfig {
                     .antMatchers("/admin/login").permitAll()//直リンクOK
                     .antMatchers("/top").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
+                    .antMatchers("/user/**").hasRole("ENDUSER")
                     .anyRequest().authenticated()
             );
 
@@ -104,6 +109,8 @@ public class UserSecurityConfig {
                     .antMatchers("/admin/login").permitAll()//直リンクOK
                     .antMatchers("/top").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
+                    .antMatchers("/admin/add").hasRole("ADMIN")
+                    .antMatchers("/admin/**").hasAnyRole("ADMIN", "GENERAL")
                     .anyRequest().authenticated()
             );
 

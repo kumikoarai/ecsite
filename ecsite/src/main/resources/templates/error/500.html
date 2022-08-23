@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script th:href="@{/webjars/jquery/3.5.0/js/jquery.min.js}"></script>
+<title>500Error</title>
+</head>
+<body>
+	<h1 th:text="${status} + ' ' + ${error}"></h1>
+	<p th:text="${message}"></p>
+	<FORM>
+		<INPUT type="button" value="戻る" onClick="history.back()">
+	</FORM>
+</body>
+</html>

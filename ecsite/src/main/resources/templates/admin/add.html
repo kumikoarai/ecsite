@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>管理者を追加/ECサイト</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/top/top.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">管理者を追加</h1>
+			<section>
+				<form id="signup-form" method="post" th:action="@{/admin/add}" class="form-signup" th:object="${adminUserForm}">
+					<div class="form-group">
+						<label for="userName" th:text="#{userName}"></label>
+						<input type="text" th:attr="placeholder=#{userName}" class="form-control" th:field="*{userName}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{userName}"></div>
+					</div>
+					<div class="form-group">
+						<label for="userEmail" th:text="#{email}"></label>
+						<input type="text" th:attr="placeholder=#{email}" class="form-control" th:field="*{userEmail}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{userEmail}"></div>
+					</div>
+					<div class="form-group">
+						<label for="password" th:text="#{password}"></label>
+						<input type="password" th:attr="placeholder=#{password}" class="form-control" th:field="*{password}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{password}"></div>
+					</div>
+					<input type="submit" value="追加" class="btn btn-primary w-100 mt-3">
+				</form>
+			</section>
+		</section>
+	</th:block>
+</body>
+</html>

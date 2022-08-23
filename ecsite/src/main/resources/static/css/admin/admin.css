@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.addadmin {
+	text-align: right;
+	padding-right: 30px;
+}
+
+.nolink {
+	color: #888 !important;
+}
+
+.advice {
+	color: #f00;
+	font-size: 13px;
+}
+
