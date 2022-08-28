@@ -8,7 +8,6 @@
 <title>管理者の管理と登録/ECサイト</title>
 <link th:href="@{/css/admin/admin.css}" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script th:src="@{/js/top/top.js}" defer></script>
 </head>
 <body>
 	<th:block layout:fragment="content">
@@ -32,7 +31,7 @@
 							<th class="th-width" th:text="#{userName}"></th>
 							<th class="th-width" th:text="#{email}"></th>
 							<th class="th-width">主</th>
-							<th class="btn-width"></th>
+							<th class="btn-width" sec:authorize="hasRole('ADMIN')"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -40,7 +39,7 @@
 							<td th:text="${item.userName}"></td>
 							<td th:text="${item.userEmail}"></td>
 							<td th:text="${item.role.equals('ROLE_ADMIN')} ? '主': ' '"></td>
-							<td><a class="btn btn-primary" th:href="@{'/admin/edit/' + ${item.userId}}">編集</a></td>
+							<td sec:authorize="hasRole('ADMIN')"><a class="btn btn-primary" th:href="@{'/admin/edit/' + ${item.userId}}">編集</a></td>
 						</tr>
 					</tbody>
 				</table>

@@ -2,8 +2,11 @@ package com.example.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import lombok.Data;
 
@@ -13,6 +16,7 @@ import lombok.Data;
 public class Product {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column (name="product_id")
 	private Integer productId;
 
@@ -30,4 +34,7 @@ public class Product {
 
 	@Column (name="release")
 	private boolean release;
+
+	@Transient
+	private PCList pCList;
 }

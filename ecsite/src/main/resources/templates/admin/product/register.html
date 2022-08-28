@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>商品を登録/ECサイト</title>
+<link th:href="@{/css/admin/register.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/registerjs.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">商品を登録</h1>
+			<form id="signup-form" method="post" th:action="@{/admin/product/register}" class="form-signup" th:object="${productForm}" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="file">商品の画像(※500KB以下)</label>
+					<input type="file" name="file" id="file">
+					<img id="preview">
+				</div>
+				<div class="form-group">
+					<label for="productName">商品名</label>
+					<input type="text" placeholder="商品名" class="form-control" th:field="*{productName}" th:errorclass="is-invalid">
+					<div class="invalid-feedback" th:errors="*{productName}"></div>
+				</div>
+					<div class="form-group">
+						<label for="productDescription">商品の説明</label>
+						<input type="text" placeholder="商品の説明" class="form-control" th:field="*{productDescription}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{productDescription}"></div>
+					</div>
+					<div class="form-group">
+						<label for="price">商品価格</label>
+						<input type="number" placeholder="商品価格" class="form-control" th:field="*{price}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{price}"></div>
+					</div>
+					<th:block th:if="${categories != null}">
+						<div class="form-group">
+							<p>商品カテゴリ（複数選択可）</p>
+							<span th:each="item: ${categories}" class="category_check">
+								<label th:attr="for=${item.categoryName}" th:text="${item.categoryName}"></label>
+								<input type="checkbox" name="category"  th:attr="value=${item.categoryId}" th:field="*{inputMultiCheck}">
+							</span>
+						</div>
+					</th:block>
+					<div class="form-group">
+						<label for="release">非公開</label>
+						<input type="radio" name="release" th:field="*{release}" value="true">
+					</div>
+					<input type="submit" value="登録" class="btn btn-primary w-100 mt-3">
+				</form>
+		</section>
+	</th:block>
+</body>
+</html>

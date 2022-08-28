@@ -110,6 +110,7 @@ public class UserSecurityConfig {
                     .antMatchers("/top").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
                     .antMatchers("/admin/add").hasRole("ADMIN")
+                    .antMatchers("/admin/edit/**").hasRole("ADMIN")
                     .antMatchers("/admin/**").hasAnyRole("ADMIN", "GENERAL")
                     .anyRequest().authenticated()
             );

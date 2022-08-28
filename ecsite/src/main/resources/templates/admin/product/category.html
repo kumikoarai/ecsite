@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>商品カテゴリ登録/ECサイト</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">商品カテゴリ登録</h1>
+			<section>
+				<form id="signup-form" method="post" th:action="@{/admin/product/category}" class="form-signup" th:object="${categoryForm}">
+					<div class="form-group">
+						<label for="categoryName">カテゴリ名</label>
+						<input type="text" placeholder="任意のカテゴリ名" class="form-control" th:field="*{categoryName}" th:errorclass="is-invalid">
+						<div class="invalid-feedback" th:errors="*{categoryName}"></div>
+					</div>
+					<input type="submit" value="登録" class="btn btn-primary w-100 mt-3">
+				</form>
+			</section>
+			<section>
+				<h3>商品カテゴリ一覧</h3>
+				<th:block th:if="${categories != null}">
+					<ul th:each="item: ${categories}">
+						<li th:text="${item.categoryName}"></li>
+					</ul>
+				</th:block>
+				<th:block th:if="${categoriesSize == 0}"><p>商品カテゴリはまだありません。</p></th:block>
+			</section>
+		</section>
+	</th:block>
+</body>
+</html>

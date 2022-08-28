@@ -11,6 +11,8 @@ import lombok.Data;
 @Data
 public class AdminUserForm {
 
+	private Integer userId;
+
 	@NotBlank
 	private String userName;
 

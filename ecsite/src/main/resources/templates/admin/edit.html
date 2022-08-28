@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>管理者の編集/ECサイト</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/detail.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">管理者の編集</h1>
+			<section>
+				<form id="user-detail-form" method="post" th:action="@{/admin/edit}" class="form-signup" th:object="${adminUserForm}">
+					<table class="table table-striped table-bordered table-hover">
+						<tbody>
+							<tr>
+								<th class="w-25">ユーザーID</th>
+								<td><input type="text"  class="form-control" th:field="*{userId}" readonly></td>
+							</tr>
+							<tr>
+								<th th:text="#{userName}" class="w-25"></th>
+								<td><input type="text"  class="form-control" th:field="*{userName}"></td>
+							</tr>
+							<tr>
+								<th th:text="#{email}" class="w-25"></th>
+								<td><input type="text"  class="form-control" th:field="*{userEmail}" readonly></td>
+							</tr>
+							<tr>
+								<th th:text="#{password}" class="w-25"></th>
+								<td><input type="text"  class="form-control" th:field="*{password}"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="text-center mt-2">
+						<!-- 更新ボタン -->
+						<button id="btn-update" class="btn btn-primary" type="button">更新</button>
+						<!-- 削除ボタン -->
+						<th:block th:if="${adminUserRole.equals('ROLE_GENERAL')}">
+							<button id="btn-delete" class="btn btn-danger" type="button">削除</button>
+						</th:block>
+					</div>
+				</form>
+			</section>
+		</section>
+	</th:block>
+</body>
+</html>

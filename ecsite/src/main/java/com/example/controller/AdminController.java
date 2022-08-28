@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -71,4 +72,25 @@ public class AdminController {
 
 		return "redirect:/admin/admin";
 	}
+
+
+	@GetMapping("/edit/{userId}")
+	public String getAdminEdit(Model model, AdminUserForm form, @PathVariable("userId") Integer userId) {
+
+		/* 管理者の取得（1件）*/
+		AdminUser user = adminUserService.getAdminUserOne(userId);
+		user.setPassword(null);
+
+		//AdminUserをformに変換
+		form = modelMapper.map(user, AdminUserForm.class);
+
+		form.setUserId(userId);
+
+		//モデルに登録
+		model.addAttribute("adminUserForm", form);
+		model.addAttribute("adminUserRole", user.getRole());
+
+		return "admin/edit";
+	}
+
 }

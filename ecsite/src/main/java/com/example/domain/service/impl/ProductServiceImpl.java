@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.domain.service.ProductService;
 import com.example.entity.Product;
@@ -25,6 +26,19 @@ public class ProductServiceImpl implements ProductService {
 			List<Product> proList = repository.findByProductNameLike("%" + product.getProductName() + "%");
 			return proList;
 		}
+	}
+
+	@Transactional
+	@Override
+	public void postProducts(Product product) {
+		repository.save(product);
+
+	}
+
+	@Override
+	public Integer getProductId(String productImg) {
+		Product product = repository.findByProductImageLike(productImg);
+		return product.getProductId();
 	}
 }
 
