@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#email_change {
+	color: #66f;
+	cursor: pointer;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+#email_change_form {
+	display: none;
+}
+
+.color {
+	color: #000 !important;
+}

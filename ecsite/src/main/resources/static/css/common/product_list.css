@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+
+ul#product_ul {
+	display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+ul#product_ul > li {
+	width: calc(25% - 20px);
+	margin: 10px;
+	border: 1px solid #eee;
+}
+
+ul#product_ul > li > a {
+	text-decoration: none;
+}
+
+ul#product_ul > li > a > .textone {
+	display: block;
+}
+
+
+ul#product_ul > li > a > .textname {
+	color: #000;
+}
+
+ul#product_ul > li > a > .textname:hover {
+	color: #a71d2a;
+}
+
+ul#product_ul > li > a > .nonimage {
+	display: block;
+	background-color: #eee;
+	min-height:150px;
+	text-align: center;
+	font-size: 20px;
+	padding-top: calc(25% - 10px);
+}
+
+ul#product_ul > li > a > .release-open > .release {
+	font-size: 1rem;
+	color: #32cd32;
+}
+
+ul#product_ul > li > a > .release-open::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #32cd32;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+ul#product_ul > li > a > .release-close > .release {
+	font-size: 1rem;
+	color: #8b0000;
+}
+
+
+ul#product_ul > li > a > .release-close::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #8b0000;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+
+
+/*=============================960px以下=============================*/
+@media screen and (max-width: 960px) {
+	ul#product_ul > li {
+		width: calc(30% - 20px);
+		margin: 10px;
+		border: 1px solid #eee;
+	}
+}
+
+
+
+/*=============================520px以下=============================*/
+@media screen and (max-width: 520px) {
+	ul#product_ul > li {
+		width: calc(80% - 20px);
+		margin: 10px;
+		border: 1px solid #eee;
+	}
+}

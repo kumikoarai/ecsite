@@ -3,3 +3,11 @@
 img {
 	max-width: 100%;
 }
+
+main > div > section {
+	margin-bottom: 50px;
+}
+
+
+
+

@@ -18,7 +18,7 @@ public class AdminUser {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column (name="user_id")
 	private Integer userId;
-
+/*
 	@Column (name="user_name")
 	private String userName;
 
@@ -29,5 +29,8 @@ public class AdminUser {
 	private String password;
 
 	@Column (name="role")
-	private String role;
+	private String role;*/
+
+	@Column (name="users_id")
+	private Integer usersId;
 }

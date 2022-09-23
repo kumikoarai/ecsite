@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.domain.service.AdminUserService;
-import com.example.entity.AdminUser;
+import com.example.entity.Users;
 import com.example.form.AdminUserForm;
 
 @Controller
@@ -36,7 +36,7 @@ public class AdminController {
 
 	@GetMapping("/admin")
 	public String getAdminAdminPage(Model model) {
-		List<AdminUser> adminUser = adminUserService.getAdminUser();
+		List<Users> adminUser = adminUserService.getAdminUser();
 		Integer adminUserSize = adminUser.size();
 
 		if(adminUserSize >= 4) {
@@ -65,7 +65,7 @@ public class AdminController {
 		}
 
 		//formをAdminUserに変換
-		AdminUser adminUser = modelMapper.map(form, AdminUser.class);
+		Users adminUser = modelMapper.map(form, Users.class);
 
 		//管理者追加登録
 		adminUserService.addAdminUser(adminUser);
@@ -78,7 +78,7 @@ public class AdminController {
 	public String getAdminEdit(Model model, AdminUserForm form, @PathVariable("userId") Integer userId) {
 
 		/* 管理者の取得（1件）*/
-		AdminUser user = adminUserService.getAdminUserOne(userId);
+		Users user = adminUserService.getAdminUserOne(userId);
 		user.setPassword(null);
 
 		//AdminUserをformに変換

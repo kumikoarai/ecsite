@@ -1,5 +1,6 @@
 package com.example.domain.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,7 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.domain.service.AdminUserService;
 import com.example.entity.AdminUser;
+import com.example.entity.Users;
 import com.example.repository.AdminUserRepository;
+import com.example.repository.UsersRepository;
 
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
@@ -20,15 +23,18 @@ public class AdminUserServiceImpl implements AdminUserService {
 	private AdminUserRepository repository;
 
 	@Autowired
+	private UsersRepository usersRepository;
+
+	@Autowired
 	private PasswordEncoder encoder;
 
 
 	@Transactional
 	@Override
-	public void addAdminUser(AdminUser user) {
+	public void addAdminUser(Users user) {
 
 		//存在チェック
-		AdminUser exists = repository.findByUserEmailLike(user.getUserEmail());
+		Users exists = usersRepository.findByUserEmailLike(user.getUserEmail());
 		if(exists != null) {
 			throw new DataAccessException("ユーザーが既に存在しています。") {};
 		}
@@ -39,30 +45,44 @@ public class AdminUserServiceImpl implements AdminUserService {
 		String rawPassword = user.getPassword();
 		user.setPassword(encoder.encode(rawPassword));
 
-		repository.save(user);
+		usersRepository.save(user);
+		Users exists2 = usersRepository.findByUserEmailLike(user.getUserEmail());
+		AdminUser adminUser = new AdminUser();
+		adminUser.setUsersId(exists2.getUserId());
+		repository.save(adminUser);
 
 	}
 
 
 	@Override
-	public List<AdminUser> getAdminUser() {
+	public List<Users> getAdminUser() {
 
 		//管理者の取得
-		List<AdminUser> users = repository.findAllByOrderByUserIdAsc();
+		List<AdminUser> adminUser = repository.findAllByOrderByUserIdAsc();
+
+		List<Integer> usersid = new ArrayList<>();
+		for(AdminUser i : adminUser) {
+			usersid.add(i.getUsersId());
+		}
+
+		List<Users> users = usersRepository.findAllById(usersid);
 
 		return users;
 	}
 
 
 	@Override
-	public AdminUser getAdminUserOne(Integer userId) {
+	public Users getAdminUserOne(Integer userId) {
 
 		// 管理者の取得（1件）
-		Optional<AdminUser> option = repository.findById(userId);
+		//Optional<AdminUser> option = repository.findById(userId);
 
-		AdminUser user = option.orElse(null);
+		//AdminUser user = option.orElse(null);
 
-		return user;
+		Optional<Users> option2 = usersRepository.findById(userId);
+		Users Users = option2.orElse(null);
+
+		return Users;
 	}
 
 
@@ -70,13 +90,13 @@ public class AdminUserServiceImpl implements AdminUserService {
 	@Override
 	public void updateAdminUserOne(Integer userId, String password, String userName) {
 
-		System.out.println(userId + " : " + password + " : " + userName);
+		//System.out.println(userId + " : " + password + " : " + userName);
 		//パスワードの暗号化
 		String encPass = encoder.encode(password);
 
-		System.out.println(userId + " : " + password + " : " + userName);
+		//System.out.println(userId + " : " + password + " : " + userName);
 		// 管理者の更新（1件）
-		repository.updateAdminUser(userId, encPass, userName);
+		usersRepository.updateAdminUser(userId, encPass, userName);
 	}
 
 
@@ -84,6 +104,7 @@ public class AdminUserServiceImpl implements AdminUserService {
 	@Override
 	public void deleteAdminUserOne(Integer userId) {
 		// 管理者を削除（1件）
-		repository.deleteById(userId);
+		repository.deleteByUsersId(userId);
+		usersRepository.deleteById(userId);
 	};
 }

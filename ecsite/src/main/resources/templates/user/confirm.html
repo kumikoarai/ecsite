@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/login/layout}">
+<head>
+<meta charset="UTF-8">
+<title>新規登録・確認画面 / ECサイト</title>
+<link th:href="@{/css/login/login.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<h2>ユーザー情報確認<span>(登録ボタンを押すと、登録が完了します。)</span></h2>
+		<form id="user-sigup-form" th:object="${endUserForm}" method="post" th:action="@{/user/signup}">
+
+			<div class="form-group">
+			<input type="hidden" class="form-control" th:field="*{userId}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="userName">お名前:</label>
+			<input type="text" class="form-control" th:attr="placeholder=${kariUser.userName}" th:field="*{userName}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="userEmail">メールアドレス:</label>
+			<input type="text" class="form-control" th:attr="placeholder=${kariUser.userEmail}" th:field="*{userEmail}" readonly>
+			</div>
+			<div class="form-group">
+			<input type="hidden" class="form-control" th:attr="placeholder=${kariUser.password}" th:field="*{password}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="birthday">誕生日:</label>
+			<input type="date" class="form-control" th:field="*{birthday}" readonly>
+			</div>
+			<div class="form-group">
+			<p>性別：
+			<th:block th:if="*{gender == 1}">
+			男性
+			</th:block>
+			<th:block th:if="*{gender == 2}">
+			女性
+			</th:block>
+			<th:block th:if="*{gender == 3}">
+			答えない
+			</th:block>
+			</p>
+			<input type="hidden" class="form-control" th:field="*{gender}" readonly>
+
+			</div>
+			<div class="form-group">
+			<label for="address">住所:</label>
+			<input type="text" class="form-control" placeholder="住所" th:field="*{address}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="phoneNumber">電話番号:</label>
+			<input type="text" class="form-control" placeholder="電話番号" th:field="*{phoneNumber}" readonly>
+			</div>
+			<!-- <button id="btn-confirm" class="btn btn-primary" type="button">確認</button> -->
+			<input type="submit" value="登録" class="btn btn-primary">
+
+		</form>
+	</section>
+</body>
+</html>

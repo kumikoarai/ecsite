@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+<title>ECサイト/TOP</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section id="product_detail_box">
+			<div class="product_detail_image">
+				<div>
+					<th:block th:if="${product.productImage != 'なし'}">
+						<img th:src="${product.productImage}">
+					</th:block>
+					<th:block th:if="${product.productImage == 'なし'}">
+						<span>画像なし</span>
+					</th:block>
+				</div>
+			</div>
+			<div class="product_detail_text">
+				<p class="product_ttl" th:text="${product.productName}"></p>
+				<p class="product_num">商品番号：<th:block th:text="${product.productId}"></th:block></p>
+				<p th:text="${product.productDescription}"></p>
+				<p class="price">価格：<th:block th:text="${T(java.lang.String).format('%,d', product.price)}"></th:block>円</p>
+
+				<form id="signup-form" method="post" th:action="@{/user/cart/add-to-cart/} + ${productId}" class="form-signup" th:object="${cartForm}">
+					<div class="form-group">
+						<label for="quantity">購入数量：</label>
+						<select name="quantity" id="quantity">
+							<th:block  th:each="i : ${quantity} ">
+								<option th:value="${i}" th:text="${i}"></option>
+							</th:block>
+						</select>
+					</div>
+					<th:block th:if="${noColors!= 0}">
+						<div class="form-group">
+							<label for="product_color">カラー：</label>
+							<select name="product_color" id="product_color">
+								<th:block  th:each="color : ${colors} ">
+								<option th:value="${color}" th:text="${color}"></option>
+								</th:block>
+							</select>
+						</div>
+					</th:block>
+					<input type="hidden" th:attr="value=*{productId}" class="form-control" name="productId" id="productId">
+					<input type="submit" value="カートに入れる" class="btn btn-primary">
+				</form>
+			</div>
+		</section>
+	</th:block>
+</body>
+</html>

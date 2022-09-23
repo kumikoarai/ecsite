@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+<title>ご購入ありがとうございます</title>
+<link th:href="@{/css/user/cart.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1 class="h2">ご購入ありがとうございます。</h1>
+		<a th:href="@{'/user/index'}" class="btn btn-primary">トップページへ</a>
+	</div>
+</body>
+</html>

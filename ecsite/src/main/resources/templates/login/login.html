@@ -7,6 +7,7 @@
 <title>ログイン・新規登録 / ECサイト</title>
 <link th:href="@{/css/login/login.css}" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/user/signup.js}" defer></script>
 </head>
 <body>
 	<section layout:fragment="content">
@@ -26,17 +27,18 @@
 				</fieldset>
 				<input type="submit" value="ログイン" class="btn btn-primary">
 			</form>
-			<form>
+			<form id="user-sigup-form" th:object="${endUserForm}" method="post" th:action="@{/user/signup_edit}">
 				<fieldset>
 					<legend>新規登録</legend>
-					<label for="userId">メールアドレス:</label>
-					<input type="text" class="form-control" placeholder="メールアドレス" name="userId">
+					<label for="userEmail">メールアドレス:</label>
+					<input type="text" class="form-control" placeholder="メールアドレス" th:field="*{userEmail}">
 					<label for="password">パスワード:</label>
-					<input type="password" class="form-control" placeholder="パスワード" name="password">
+					<input type="password" class="form-control" placeholder="パスワード" th:field="*{password}" autocomplete="on">
 					<label for="userName">氏名:</label>
-					<input type="text" class="form-control" placeholder="氏名" name="userName">
+					<input type="text" class="form-control" placeholder="氏名" th:field="*{userName}">
 				</fieldset>
-				<input type="submit" value="新規登録" class="btn btn-primary">
+				<button id="btn-signup1" class="btn btn-primary" type="button">新規登録</button>
+				<!-- <input type="submit" value="新規登録" class="btn btn-primary"> -->
 			</form>
 		</section>
 		<section id="admin_section">

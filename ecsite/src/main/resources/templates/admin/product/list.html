@@ -7,11 +7,48 @@
 <title>商品を確認/ECサイト</title>
 <link th:href="@{/css/top/top.css}" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/list.js}" defer></script>
 </head>
 <body>
-<th:block layout:fragment="content">
+	<th:block layout:fragment="content">
 		<section>
 			<h1 class="h2">商品を確認</h1>
+			<section>
+			<!-- 検索 -->
+			<div class="mb-4">
+				<form id="product_saerch_form" class="form-inline" th:object="${topProductListForm}">
+					<div class="form-group">
+						<input type="text" class="form-control" th:field="*{productName}">
+					</div>
+					<button id="btn-search" class="btn btn-primary ml-3" type="button">検索</button>
+				</form>
+			</div>
+			</section>
+			<section>
+				<ul id="product_ul">
+					<th:block th:each="item: ${productList}">
+						<li>
+							<a th:href="@{/admin/product/detail/} + ${item.productId}">
+								<th:block th:if="${item.release == true}">
+									<span class="release-open" ><span class="release" >公開</span></span>
+								</th:block>
+								<th:block th:if="${item.release == false}">
+									<span class="release-close" ><span class="release" >非公開</span></span>
+								</th:block>
+								<th:block th:if="${item.productImage != 'なし'}">
+									<img th:src="@{'' + ${item.productImage} + ''}">
+								</th:block>
+								<th:block th:if="${item.productImage == 'なし'}">
+									<span class="nonimage text-dark">画像なし</span>
+								</th:block>
+								<span class="textone textname" th:text="${item.productName}"></span>
+								<span class="textone text-danger">&#165;<span th:text="${item.price}"></span></span>
+
+							</a>
+						</li>
+					</th:block>
+				</ul>
+			</section>
 		</section>
 	</th:block>
 </body>

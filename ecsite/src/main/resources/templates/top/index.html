@@ -24,11 +24,27 @@
 			</div>
 		</section>
 		<section>
-				<ul id="product_ul">
-					<th:block th:each="item: ${productList}">
-						<li><img th:src="@{'' + ${item.productImage} + ''}"><p th:text="${item.productName}"></p></li>
+			<th:block th:if="${categoryName} != null">
+				<p id="pankuzu">TOPページ > <th:block th:text="${categoryName}"></th:block></p>
+			</th:block>
+			<ul id="product_ul">
+				<th:block th:each="item: ${productList}">
+					<th:block th:if="${item.release == true}">
+						<li>
+							<a th:href="@{/top/product/detail/} + ${item.productId}">
+								<th:block th:if="${item.productImage != 'なし'}">
+									<img th:src="@{'' + ${item.productImage} + ''}">
+								</th:block>
+								<th:block th:if="${item.productImage == 'なし'}">
+									<span class="nonimage text-dark">画像なし</span>
+								</th:block>
+								<span class="textone textname" th:text="${item.productName}"></span>
+								<span class="textone text-danger">&#165;<span th:text="${T(java.lang.String).format('%,d', item.price)}"></span></span>
+							</a>
+						</li>
 					</th:block>
-				</ul>
+				</th:block>
+			</ul>
 		</section>
 	</div>
 </body>

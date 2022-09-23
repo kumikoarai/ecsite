@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,5 +38,7 @@ public class Product {
 	private boolean release;
 
 	@Transient
-	private PCList pCList;
+	private List<String> categoryName;
+
+
 }

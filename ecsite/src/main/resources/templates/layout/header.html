@@ -7,13 +7,25 @@
 </head>
 <body>
 	<header layout:fragment="header" class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-dark">
-		<div class="container-fluid">
+		<div id="header_box" class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" th:href="@{'/top'}">ECサイト</a>
 			</div>
-			<a class="btn btn-link pull-right navbar-brand" th:href="@{'/login'}">ログイン</a>
-
+			<div class="header_btn_box">
+				<a class="btn btn-link pull-right navbar-brand header_cart_btn" th:href="@{'/top/cart/add-to-cart'}">
+					<th:block th:if="${#session.getAttribute('cartSessionList') != null}">
+						<th:block th:if="${#session.getAttribute('cartSessionList').size() != 0}">
+							<span class="cart_item_count" th:text="${#session.getAttribute('cartSessionList').size()}"></span>
+						</th:block>
+					</th:block>
+					カート
+				</a>
+				<div class="login_btn_box">
+					<a class="btn btn-link pull-right navbar-brand" th:href="@{'/login'}">ログイン</a>
+				</div>
+			</div>
 		</div>
+		<span id="hamburger_menu" class="horizontal_line"><span></span></span>
 	</header>
 </body>
 </html>

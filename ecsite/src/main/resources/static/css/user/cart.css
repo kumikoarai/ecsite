@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+#cart_pay form label {
+	width: 100%;
+}
+
+#cart_pay form label .totalprice_ttl {
+	display: block;
+}
+
+.totalprice {
+	display: block;
+	width: calc(100% - 40px);
+	margin: auto;
+}
+
+.totalprice input {
+	width: calc(100% - 40px);
+	border: none;
+	text-align: right;
+}
+
+
+/*=============================520px以下=============================*/
+@media screen and (max-width: 520px) {
+	#cart_pay form label .totalprice_ttl {
+		display: inline-block;
+	}
+	.totalprice {
+		display: inline-block;
+		width: 30%;
+		margin: auto;
+	}
+
+	.totalprice input {
+		width: calc(100% - 40px);
+		border: none;
+		text-align: right;
+	}
+
+
+}

@@ -8,18 +8,15 @@ $(function() {
 		let entry_date1 = $('input[name="userName"]').val();
 		let entry_date2 = $('input[name="password"]').val();
 
-		var bl = false;
+		var bl = true;
 		if(entry_date1 == null || entry_date1 == '' ){
 			$("#userName").parent("td").append('<p class="entrynull">※氏名を入力してください。</p>');
 			bl = false;
-		} else {
-			bl = true;
 		};
+
 		if(entry_date2 == null || entry_date2 == '' ){
 			$("#password").parent("td").append('<p class="entrynull">※新しいパスワードを入力してください。</p>');
 			bl = false;
-		} else {
-			bl = true;
 		};
 
 		if(bl == true){

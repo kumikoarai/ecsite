@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>商品受注履歴詳細/ECサイト</title>
+<link th:href="@{/css/admin/order_detail.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/list.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">商品受注履歴詳細</h1>
+			<section>
+				<h3>注文者情報</h3>
+				<table class="table-striped table-bordered table-hover" th:object="${endUser}">
+					<tr>
+						<th class="th-width">注文者番号</th>
+						<td th:text="${endUser.usersId}"></td>
+					</tr>
+					<tr>
+						<th class="th-width">氏名</th>
+						<td th:text="${endUser.userName}"></td>
+					</tr>
+					<tr>
+						<th class="th-width">メールアドレス</th>
+						<td th:text="${endUser.userEmail}"></td>
+					</tr>
+					<tr>
+						<th class="th-width">誕生日</th>
+						<td th:text="${#dates.format(endUser.birthday, 'yyyy年MM月dd日')}"></td>
+					</tr>
+					<tr>
+						<th class="th-width">性別</th>
+						<td th:text="${endUser.gender == 1}? '男性' : '女性'"></td>
+					</tr>
+					<tr>
+						<th class="th-width">住所</th>
+						<td th:text="${endUser.address}"></td>
+					</tr>
+					<tr>
+						<th class="th-width">電話番号</th>
+						<td th:text="${endUser.phoneNumber}"></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h3>注文内容</h3>
+				<th:block>
+				<p class="order_date">購入日時：<span th:text="${#dates.format(productOrder.orderDate, 'yyyy年MM月dd日　(HH時mm分ss秒)')}"></span></p>
+				<p class="order_price_ttl">購入合計金額：　<span class="order_price" th:text="${T(java.lang.String).format('%,d', productOrder.totalPrice)}"></span>円</p>
+				</th:block>
+
+				<section id="products">
+					<table class="table-striped table-bordered table-hover" th:each="item: ${orderProductDetailList}">
+						<tbody>
+								<tr>
+									<td rowspan="5" class="img_td">
+										<th:block th:if="${item.productImage != 'なし'}">
+											<img th:src="@{'' + ${item.productImage} + ''}">
+										</th:block>
+									</td>
+									<td><p><a th:href="@{/admin/product/detail/} + ${item.productId}" th:text="${item.productName}"></a></p></td>
+								</tr>
+								<tr>
+									<td><p>単価：<span th:text="${item.price}"></span>円</p></td>
+								</tr>
+								<tr>
+									<td><p>注文数量：<span th:text="${item.quantity}"></span></p></td>
+								</tr>
+								<tr>
+									<td>
+										<p>注文カラー：
+											<span  th:text="${item.productColor != null}? ${item.productColor} : 'なし'"></span>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td><p>合計価格：<span th:text="${item.quantity * item.price}"></span></p></td>
+								</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+		</section>
+	</th:block>
+</body>
+</html>

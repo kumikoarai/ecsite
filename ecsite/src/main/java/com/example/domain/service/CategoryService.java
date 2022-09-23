@@ -12,5 +12,9 @@ public interface CategoryService {
 	/**カテゴリの登録*/
 	public void registerCategory(Category category);
 
+	/**カテゴリ名の取得*/
+	public String getCategoruName(Integer categoryId);
 
+	/**カテゴリIDの取得*/
+	public Integer getCategoryId(String categoryName);
 }

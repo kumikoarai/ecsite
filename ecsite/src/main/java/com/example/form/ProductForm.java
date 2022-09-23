@@ -7,8 +7,6 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.NumberFormat;
 
-import com.example.entity.PCList;
-
 import lombok.Data;
 
 @Data
@@ -29,7 +27,7 @@ public class ProductForm {
 
 	private boolean release;
 
-	private List<PCList> pCList;
+	private List<String> categoryName;
 
 	private String[] inputMultiCheck;
 
@@ -40,4 +38,8 @@ public class ProductForm {
 	public void setInputMultiCheck(String[] inputMultiCheck) {
 		this.inputMultiCheck = inputMultiCheck;
 	}
+
+	private Integer maxQuantity;
+
+	private List<String> colors;
 }

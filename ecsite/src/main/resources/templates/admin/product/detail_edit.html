@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>商品を確認・詳細ページ/ECサイト</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<link th:href="@{/css/admin/register.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/product_detail.js}" defer></script>
+<script th:src="@{/js/admin/registerjs.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">商品の詳細</h1>
+			<form id="product-form" method="post" th:action="@{/admin/product/detail}" class="form-signup" th:object="${productForm}" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="productId">商品番号</label>
+					<input type="text" class="form-control" th:field="*{productId}" readonly>
+				</div>
+				<div class="form-group">
+					<label for="file">商品の画像(※500KB以下)</label>
+					<input type="file" name="file" id="file">
+					<th:block th:if="*{productImage != 'なし'}">
+					<img th:src="*{productImage}" id="preview">
+					</th:block>
+					<th:block th:if="*{productImage == 'なし'}"><img id="preview"></th:block>
+					<input type="text" class="form-control" th:field="*{productImage}" readonly>
+				</div>
+				<div class="form-group">
+					<label for="productName">商品名</label>
+					<input type="text" placeholder="商品名" class="form-control" th:field="*{productName}" th:errorclass="is-invalid">
+					<div class="invalid-feedback" th:errors="*{productName}"></div>
+				</div>
+				<div class="form-group">
+					<label for="productDescription">商品の説明</label>
+					<input type="text" placeholder="商品の説明" class="form-control" th:field="*{productDescription}" th:errorclass="is-invalid">
+					<div class="invalid-feedback" th:errors="*{productDescription}"></div>
+				</div>
+				<div class="form-group">
+					<label for="price">商品価格</label>
+					<input type="number" placeholder="商品価格" class="form-control" th:field="*{price}" th:errorclass="is-invalid">
+					<div class="invalid-feedback" th:errors="*{price}"></div>
+				</div>
+
+				<th:block th:if="${categories != null}">
+					<div class="form-group">
+						<p>商品カテゴリ（複数選択可）</p>
+						<p>選択済みカテゴリ：
+							<th:block th:text="*{categoryName.size < 1} ? 'なし'"></th:block>
+							<th:block th:each="pc : *{categoryName}">
+								<th:block th:text="${pc != null} ? ${pc} : 'なし'"></th:block>
+							</th:block>
+						</p>
+						<span th:each="item: ${categories}" class="category_check">
+							<label th:attr="for=${item.categoryName}" th:text="${item.categoryName}"></label>
+							<input type="checkbox" name="category"  th:attr="value=${item.categoryId}" th:field="*{inputMultiCheck}">
+						</span>
+					</div>
+				</th:block>
+				<div class="form-group">
+					<label for="maxQuantity">購入数量上限</label>
+					<input type="number" placeholder="購入数量上限" class="form-control" th:field="*{maxQuantity}">
+				</div>
+
+				<div class="form-group">
+					<label for="colors">カラーを指定</label><span id="add_color">＋カラーの追加</span>
+					<th:block th:each="color : *{colors}">
+					<input type="text" placeholder="カラー名" class="form-control" th:attr="value=${color}" name="colors" id="colors"><span class="color_sakujo">削除</span>
+					</th:block>
+				</div>
+
+				<div class="form-group">
+					<label for="release">公開</label>
+					<input type="radio" name="release" th:field="*{release}" value="true">
+				</div>
+				<div class="text-center mt-2">
+					<!-- 更新ボタン
+					<button id="btn-update" class="btn btn-primary" type="button">更新</button> -->
+					<input type="submit" value="更新" class="btn btn-primary">
+					<!-- 削除ボタン -->
+					<button id="btn-delete" class="btn btn-danger" type="button">削除</button>
+				</div>
+			</form>
+		</section>
+	</th:block>
+</body>
+</html>

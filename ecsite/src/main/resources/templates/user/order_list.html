@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+<title>購入履歴 / ECサイト</title>
+<link th:href="@{/css/user/order.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<h2>購入履歴</h2>
+		<section id="order_box">
+			<th:block th:each="element : ${orderListMap}">
+				<article class="item_art">
+					<div class="order_ttl">
+						<th:block th:each="productOrderList : ${productOrderList}">
+						<th:block th:if="${element.getKey()} == ${productOrderList.orderId}">
+							<p class="order_date">購入日時：<span th:text="${#dates.format(productOrderList.orderDate, 'yyyy年MM月dd日　(HH時mm分ss秒)')}"></span></p>
+							<p class="order_total">購入合計金額：<span th:text="${T(java.lang.String).format('%,d', productOrderList.totalPrice)}"></span>円</p>
+						</th:block>
+						</th:block>
+						<p class="order_num">注文番号：<span th:text="${element.getKey()}"></span></p>
+					</div>
+					<div class="order_day_list">
+					<th:block th:each="OrderProductDetail : ${element.getValue()}">
+						<table class="table-striped table-bordered table-hover order_product">
+							<tr>
+								<td class="img_td">
+									<th:block th:if="${OrderProductDetail.productImage != 'なし'}">
+										<img th:src="@{'' + ${OrderProductDetail.productImage} + ''}">
+									</th:block>
+									<th:block th:if="${OrderProductDetail.productImage == 'なし'}">
+										<p>画像なし</p>
+									</th:block>
+								</td>
+								<td>
+									<p class="order_product_ttl"><a th:href="@{/user/product/detail/} + ${OrderProductDetail.productId}" th:text="${OrderProductDetail.productName}"></a></p>
+									<p class="order_product_num">商品番号：<span th:text="${OrderProductDetail.productId}"></span></p>
+									<p class="order_product_price">単価：<span th:text="${T(java.lang.String).format('%,d', OrderProductDetail.price)}"></span>円</p>
+									<p class="order_product_qt">注文数量：<span th:text="${OrderProductDetail.quantity}"></span></p>
+									<p class="order_product_color">注文カラー：
+										<span  th:text="${OrderProductDetail.productColor != null}? ${OrderProductDetail.productColor} : 'なし'"></span>
+									</p>
+									<p class="order_product_sub">小計：<span th:text="${T(java.lang.String).format('%,d', OrderProductDetail.quantity * OrderProductDetail.price)}"></span>円</p>
+								</td>
+							</tr>
+						</table>
+					</th:block>
+					</div>
+				</article>
+			</th:block>
+		</section>
+	</section>
+</body>
+</html>

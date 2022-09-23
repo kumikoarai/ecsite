@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#products table tr td img {
+	max-width: 200px;
+}
+
+.img_td {
+	max-width: 300px;
+}
+
+#products table tr td p {
+	margin: 0px;
+}
+
+#products > table {
+	margin: 20px 0px;
+}
+
+h3 {
+	border-bottom: 1px solid #aaa;
+}
+
+.order_price_ttl {
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+
+.order_price {
+	color: #800000;
+}

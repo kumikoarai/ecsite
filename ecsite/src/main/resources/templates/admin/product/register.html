@@ -43,11 +43,23 @@
 							</span>
 						</div>
 					</th:block>
+
+					<div class="form-group">
+						<label for="maxQuantity">購入個数上限（無記入の場合は10個）</label>
+						<input type="number" placeholder="数字を記入" class="form-control" th:field="*{maxQuantity}">
+						<div class="invalid-feedback" th:errors="*{maxQuantity}"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="colors">カラー指定</label><span id="add_color">＋カラーの追加</span>
+						<input type="text" placeholder="カラーを入力" class="form-control" th:field="*{colors}">
+					</div>
+
 					<div class="form-group">
 						<label for="release">非公開</label>
 						<input type="radio" name="release" th:field="*{release}" value="true">
 					</div>
-					<input type="submit" value="登録" class="btn btn-primary w-100 mt-3">
+					<input type="submit" value="登録" class="btn btn-primary">
 				</form>
 		</section>
 	</th:block>

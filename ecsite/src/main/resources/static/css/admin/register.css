@@ -8,3 +8,12 @@
 	max-width: 200px;
 }
 
+#add_color {
+	margin-left: 20px;
+	color: #14f;
+	cursor: pointer;
+}
+
+.color_sakujo {
+	cursor: pointer;
+}

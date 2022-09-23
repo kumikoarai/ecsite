@@ -1,5 +1,7 @@
 package com.example.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,11 +9,10 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
@@ -27,7 +28,7 @@ public class UserSecurityConfig {
 
 
     /*インメモリ認証*/
-    @Bean
+   /* @Bean
     public InMemoryUserDetailsManager userDetailsService() {
             PasswordEncoder encoder = passwordEncoder();
             UserDetails user = User.withUsername("user")
@@ -43,6 +44,18 @@ public class UserSecurityConfig {
 		                    .roles("GENERAL")
 		                    .build();
             return new InMemoryUserDetailsManager(user, admin, admin_gene);
+    }
+   */
+    @Bean
+    public UserDetailsManager users(DataSource dataSource) {
+        String userQuery =
+                "select user_email,password,true from users where user_email = ?";
+        String authoritiesQuery =
+                "select user_email,role from users where user_email = ?";
+        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+        users.setUsersByUsernameQuery(userQuery);
+        users.setAuthoritiesByUsernameQuery(authoritiesQuery);
+        return users;
     }
 
 
@@ -68,8 +81,12 @@ public class UserSecurityConfig {
                     .antMatchers("/css/*").permitAll()
                     .antMatchers("/js/*").permitAll()
                     .antMatchers("/login").permitAll()//直リンクOK
+                    .antMatchers("/user/signup_edit").permitAll()//直リンクOK
+                    //.antMatchers("/user/signup_edit").permitAll()//直リンクOK
+                    .antMatchers("/user/confirm").permitAll()//直リンクOK
+                    .antMatchers("/user/signup").permitAll()//直リンクOK
                     .antMatchers("/admin/login").permitAll()//直リンクOK
-                    .antMatchers("/top").permitAll()//直リンクOK
+                    .antMatchers("/top/**").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
                     .antMatchers("/user/**").hasRole("ENDUSER")
                     .anyRequest().authenticated()
@@ -107,7 +124,7 @@ public class UserSecurityConfig {
                     .antMatchers("/js/*").permitAll()
                     .antMatchers("/login").permitAll()//直リンクOK
                     .antMatchers("/admin/login").permitAll()//直リンクOK
-                    .antMatchers("/top").permitAll()//直リンクOK
+                    .antMatchers("/top/**").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
                     .antMatchers("/admin/add").hasRole("ADMIN")
                     .antMatchers("/admin/edit/**").hasRole("ADMIN")

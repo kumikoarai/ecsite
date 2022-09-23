@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/admin/layout}">
+<head>
+<meta charset="UTF-8">
+<title>商品受注履歴/ECサイト</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/admin/list.js}" defer></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<section>
+			<h1 class="h2">商品受注履歴</h1>
+			<section>
+			<!-- 検索
+			<div class="mb-4">
+				<form id="product_saerch_form" class="form-inline" th:object="${topProductListForm}">
+					<div class="form-group">
+						<input type="text" class="form-control" th:field="*{productName}">
+					</div>
+					<button id="btn-search" class="btn btn-primary ml-3" type="button">検索</button>
+				</form>
+			</div> -->
+			</section>
+			<section>
+				<table class="table table-striped table-bordered table-hover">
+					<thead class="thead-light">
+						<tr>
+							<th class="th-width">オーダー番号</th>
+							<th class="th-width">顧客名</th>
+							<th class="th-width">合計金額</th>
+							<th class="th-width">購入日時</th>
+							<th class="btn-width">詳細</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item: ${productOrderList}">
+							<td th:text="${item.orderId}"></td>
+							<td th:text="${item.userName}"></td>
+							<td th:text="${T(java.lang.String).format('%,d', item.totalPrice)}"></td>
+							<td th:text="${#dates.format(item.orderDate, 'yyyy年MM月dd日　(HH時mm分ss秒)')}"></td>
+							<td><a class="btn btn-primary" th:href="@{'/admin/product/order/detail/' + ${item.orderId}}">詳細</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+	</th:block>
+</body>
+</html>

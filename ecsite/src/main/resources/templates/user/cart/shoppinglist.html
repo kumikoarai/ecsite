@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+<title>ショッピングカート</title>
+<link th:href="@{/css/user/cart.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1 class="h2">ショッピングカート</h1>
+		<section id="cart_list">
+			<th:block th:if="${cartSessionListOr != 0}">
+				<div id="cart_main">
+					<th:block th:each="product : ${cartProductList}">
+						<div class="itembox">
+							<div class="imgbox">
+								<th:block th:if="*{product.productImage != 'なし'}">
+									<img th:src="*{product.productImage}">
+								</th:block>
+								<th:block th:if="*{product.productImage == 'なし'}">
+									<span class="noimage">画像なし</span>
+								</th:block>
+							</div>
+							<div class="textbox">
+								<a th:href="@{/user/product/detail/} + *{product.productId}"><span th:text="*{product.productName}"></span></a>
+								<p class="product_num">商品番号：<span th:text="*{product.productId}"></span></p>
+								<p>価格：<span th:text="*{T(java.lang.String).format('%,d', product.price)}"></span>円</p>
+								<p>個数：<span th:text="*{product.quantity}"></span></p>
+								<th:block th:if="*{product.product_color != null}">
+									<p>色：<span th:text="*{product.product_color}"></span></p>
+								</th:block>
+								<!-- <p>mapキー：<span th:text="*{product.mapListKey}"></span></p> -->
+							</div>
+							<div class="delete_btn">
+								<form method="post" th:action="@{/user/cart/remove}" class="form-signup">
+									<input type="hidden" th:attr="value=*{product.mapListKey}" class="form-control" name="mapListKey" id="mapListKey">
+									<input type="submit" value="削除" class="btn btn-primary">
+								</form>
+							</div>
+						</div>
+					</th:block>
+				</div>
+
+				<div id="cart_pay">
+					<form method="post" th:action="@{/user/cart/payment}">
+						<label><span class="totalprice_ttl">合計金額：</span>
+						<span class="totalprice"><input type="text" name="total" id="total" th:value="${total}" readonly>
+						円</span></label>
+						<input type="submit" value="会計" class="btn btn-primary">
+					</form>
+				</div>
+			</th:block>
+			<th:block th:if="${cartSessionListOr == 0}">
+				<p>ショッピングカートには何もありません。</p>
+			</th:block>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/login/layout}">
+<head>
+<meta charset="UTF-8">
+<title>新規登録 / ECサイト</title>
+<link th:href="@{/css/login/login.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<h2>ユーザー情報登録<span>(アカウント登録はまだ完了していません。)</span></h2>
+		<form id="user-sigup-form" th:object="${endUserForm}" method="post" th:action="@{/user/confirm}">
+
+			<div class="form-group">
+			<input type="hidden" class="form-control" th:field="*{userId}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="userName">お名前:</label>
+			<input type="text" class="form-control" th:field="*{userName}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="userEmail">メールアドレス:</label>
+			<input type="text" class="form-control" th:field="*{userEmail}" readonly>
+			</div>
+			<div class="form-group">
+			<input type="hidden" class="form-control" th:field="*{password}" readonly>
+			</div>
+			<div class="form-group">
+			<label for="birthday">誕生日:</label>
+			<input type="date" class="form-control" th:field="*{birthday}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{birthday}"></div>
+			</div>
+			<div class="form-group">
+			<p>性別：</p>
+			<label for="gender1" class="">男性</label>
+			<input type="radio" class="" value="1" th:field="*{gender}" th:errorclass="is-invalid">
+			<label for="gender2" class="">女性</label>
+			<input type="radio" class="" value="2" th:field="*{gender}" th:errorclass="is-invalid">
+			<label for="gender3" class="">答えない</label>
+			<input type="radio" class="" value="3" th:field="*{gender}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{gender}"></div>
+			</div>
+			<div class="form-group">
+			<label for="address">住所:</label>
+			<input type="text" class="form-control" placeholder="住所" th:field="*{address}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{address}"></div>
+			</div>
+			<div class="form-group">
+			<label for="phoneNumber">電話番号:</label>
+			<input type="text" class="form-control" placeholder="電話番号" th:field="*{phoneNumber}" th:errorclass="is-invalid">
+			<div class="invalid-feedback" th:errors="*{phoneNumber}"></div>
+			</div>
+			<!-- <button id="btn-confirm" class="btn btn-primary" type="button">確認</button> -->
+			<input type="submit" value="確認" class="btn btn-primary">
+
+		</form>
+	</section>
+</body>
+</html>

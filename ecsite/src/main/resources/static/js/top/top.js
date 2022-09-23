@@ -6,6 +6,7 @@ var productData = null;
 $(function() {
 	$('#btn-search').click(function(event) {
 		$('#product_ul').empty();
+		$('#pankuzu').empty();
 		search();
 	});
 });
@@ -32,7 +33,13 @@ function search() {
 		productData = data;
 		//作成
 		$.each(productData, function(index, value) {
-		    $('#product_ul').append('<li><img src="' + value.productImage + '"><p>' + value.productName + '</p></li>');
+			var pid = Number(value.productId);
+			var url = "/top/product/detail/" + pid;
+			if(value.productImage != "なし") {
+				$('#product_ul').append('<li><a href="' + url +'"><img src="' + value.productImage + '"><span class="textone textname">' + value.productName + '</span><span class="textone text-danger">&#165;<span>' + value.price + '</span></span></a></li>');
+			} else {
+				$('#product_ul').append('<li><a href="' + url +'"><span class="nonimage text-dark">画像なし</span><span class="textone textname">' + value.productName + '</span><span class="textone text-danger">&#165;<span>' + value.price + '</span></span></a></li>');
+			};
 		});
 
 	}).fail(function(jqHR, textStatus, errorThrown) {

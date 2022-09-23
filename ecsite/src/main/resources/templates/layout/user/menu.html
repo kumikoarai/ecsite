@@ -11,6 +11,11 @@
 			<li role="presentation">
 				<a class="nav-link" th:href="@{'/user/index'}">トップページ</a>
 			</li>
+			<th:block th:each="catitem: ${categories}">
+				<li role="presentation">
+					<a class="nav-link" th:text="${catitem.categoryName}" th:href="@{'/user/'} + ${catitem.categoryName}"></a>
+				</li>
+			</th:block>
 		</ul>
 	</div>
 </body>

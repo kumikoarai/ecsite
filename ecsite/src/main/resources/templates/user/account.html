@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="~{layout/user/layout}">
+<head>
+<meta charset="UTF-8">
+<title>アカウント情報編集/TOP</title>
+<link th:href="@{/css/top/top.css}" rel="stylesheet"/>
+<link th:href="@{/css/user/account.css}" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:src="@{/js/user/account.js}" defer></script>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1 class="h2">アカウント情報</h1>
+		<section>
+			<form id="user-form" th:object="${endUserForm}" method="post">
+				<div class="form-group">
+				<label for="userId">会員No.:</label>
+				<input type="text" class="form-control" th:field="*{userId}" readonly>
+				</div>
+				<div class="form-group">
+				<label for="userName">お名前:</label>
+				<input type="text" class="form-control" th:attr="placeholder=${endUserForm.userName}" th:field="*{userName}">
+				</div>
+				<div class="form-group">
+				<label for="userEmail">メールアドレス:</label>
+				<input type="text" class="form-control" th:attr="placeholder=${endUserForm.userEmail}" th:field="*{userEmail}" readonly>
+				</div>
+				<div class="form-group">
+				<label for="password">パスワード:</label>
+				<input type="password" class="form-control" th:attr="placeholder=${endUserForm.password}" th:field="*{password}">
+				</div>
+				<div class="form-group">
+				<label for="birthday">誕生日:</label>
+				<input type="date" class="form-control" th:field="*{birthday}">
+				</div>
+				<div class="form-group">
+				<p>性別：
+				<th:block th:if="*{gender == 1}">
+				男性
+				</th:block>
+				<th:block th:if="*{gender == 2}">
+				女性
+				</th:block>
+				<th:block th:if="*{gender == 3}">
+				答えない
+				</th:block>
+				</p>
+				<input type="hidden" class="form-control" th:field="*{gender}">
+
+				</div>
+				<div class="form-group">
+				<label for="address">住所:</label>
+				<input type="text" class="form-control" placeholder="住所" th:field="*{address}">
+				</div>
+				<div class="form-group">
+				<label for="phoneNumber">電話番号:</label>
+				<input type="text" class="form-control" placeholder="電話番号" th:field="*{phoneNumber}">
+				</div>
+				<div class="form-group">
+				<input type="hidden" class="form-control" th:field="*{usersId}">
+				</div>
+				<button id="btn-update" class="btn btn-primary" type="button">更新</button>
+				<!-- <input type="submit" value="登録" class="btn btn-primary"> -->
+			</form>
+		</section>
+		<section>
+			<div id="email_change">メールアドレスを変更はこちら</div>
+			<form id="email_change_form" class="mt20" th:object="${endUserForm}">
+				<div class="form-group">
+				<label for="userEmail">新しいメールアドレス:</label>
+				<input type="text" class="form-control" th:field="*{userEmail}">
+				</div>
+				<div class="form-group">
+				<input type="hidden" class="form-control" th:field="*{usersId}">
+				</div>
+				<button id="btn-email-change" class="btn btn-primary" type="button">メールアドレスを変更</button>
+			</form>
+		</section>
+	</div>
+</body>
+</html>
