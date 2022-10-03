@@ -214,7 +214,7 @@ public class ProductAdminController {
 		//もし空じゃなければ、一旦、フォルダへ、画像の保存
 		if(!file.isEmpty()) {
 			File newFileName = null;
-			/*==============================================クライアントPCからサーバーへの画像の保存処理↓ここから===============================================*/
+			/*==============================================クライアントPCまたはtomcatのwebappsから、サーバーのアプリ外部フォルダへの画像の保存処理↓ここから===============================================*/
 			newFileName = productService.postProductImageFolder(file);
 
 			try {
@@ -236,8 +236,8 @@ public class ProductAdminController {
 			}
 			form.setProductImage("https://ecsite-sample-kumiko.net/product_image/" + newFileName.getName());
 
-			/*==============================================クライアントPCからサーバーへの画像の保存処理↑ここまで===============================================*/
-			/*==============================================本番環境でサーバーへの画像の保存処理↓ここから===============================================*/
+			/*==============================================クライアントPCまたはtomcatのwebappsから、サーバーのアプリ外部フォルダへの画像の保存処理↑ここまで===============================================*/
+			/*==============================================tomcatのwebapps下への画像の保存処理↓ここから===============================================*/
 
 			/*try {
 				// ファイル名をリネイム
@@ -268,7 +268,7 @@ public class ProductAdminController {
 			} catch (Exception e) {
 				form.setProductImage("なし");
 			}*/
-			/*==============================================本番環境でサーバーへの画像の保存処理↑ここまで===============================================*/
+			/*==============================================tomcatのwebapps下への画像の保存処理↑ここまで===============================================*/
 
 		}
 
@@ -290,7 +290,6 @@ public class ProductAdminController {
 			form.setMaxQuantity(10);
 		}
 		ProductMaxQuantity productMaxQuantity = new ProductMaxQuantity();
-		//ProductMaxQuantity productMaxQuantity = modelMapper.map(form, ProductMaxQuantity.class);
 		productMaxQuantity.setMaxQuantity(form.getMaxQuantity());
 		productMaxQuantity.setProductId(form.getProductId());
 
@@ -333,8 +332,6 @@ public class ProductAdminController {
 
 		/* 商品のカテゴリ取得*/
 		List<ProductCategory> pc = productCategoryService.getProductCategories(productId);
-
-		//System.out.println(pc);
 
 		/* カテゴリ取得 */
 		List<Category> categories = categoryService.getCategories();
