@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-03T10:54:22.836Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Q5Uf14Jn1Qm6vvlbaH-s" version="20.3.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-03T10:55:48.968Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="DXqwTkLUgPXXLJJH4yjY" version="20.3.6" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
-    <mxGraphModel dx="780" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -35,7 +35,7 @@
         <mxCell id="i2O5NSJqbqHjVbn4kxMg-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="TnnzGRk08jkUrDA6-9OY-14" target="TnnzGRk08jkUrDA6-9OY-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TnnzGRk08jkUrDA6-9OY-14" value="ProductRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="TnnzGRk08jkUrDA6-9OY-14" value="&lt;&lt; interface &gt;&gt;&#xa;ProductRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="20" y="770" width="490" height="210" as="geometry">
             <mxRectangle x="225" y="360" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
