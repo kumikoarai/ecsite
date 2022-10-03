@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-03T13:04:46.286Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="mKV_66VzA0cdThuT0nGc" version="20.3.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-03T13:04:58.956Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Lz0ghXxCGyD2d5D0Yayu" version="20.3.6" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="780" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -164,7 +164,7 @@
           <mxGeometry y="100" width="260" height="110" as="geometry" />
         </mxCell>
         <mxCell id="s7SdXIw9Ny6-5YXZR9oK-6" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1260" y="20" width="270" height="170" as="geometry">
+          <mxGeometry x="1260" y="20" width="270" height="130" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
