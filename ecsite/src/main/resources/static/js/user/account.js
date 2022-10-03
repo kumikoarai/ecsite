@@ -1,5 +1,7 @@
 'use strict'
 
+var urlhostname = "https://ecsite-sample-kumiko.net/ecsite";
+
 $(function() {
 	/** 更新ボタンを押したら*/
 	$('#btn-update').click(function(event) {
@@ -84,14 +86,14 @@ function userUpdate() {
 	$.ajax({
 		type : "PUT",
 		cache : false,
-		url : '/user/update',
+		url : urlhostname + '/user/update',
 		data: formData,
 		dataType : 'json',
 	}).done(function(data) {
 		//ajax成功時の処理
 		//console.log(data);
 		alert("アカウント情報の更新をしました。");
-		window.location.href='/user/account';
+		window.location.href= urlhostname + '/user/account';
 	}).fail(function(jqHR, textStatus, errorThrown) {
 		//ajax失敗時の処理
 		//console.log(jqHR);
@@ -115,14 +117,14 @@ function emailUpdate() {
 	$.ajax({
 		type : "PUT",
 		cache : false,
-		url : '/user/updateEmail',
+		url : urlhostname + '/user/updateEmail',
 		data: formData,
 		dataType : 'json',
 	}).done(function(data) {
 		//ajax成功時の処理
 		//console.log(data);
 		alert("メールアドレスを変更しました。再度ログインしてください。");
-		window.location.href='/user/logout';
+		window.location.href= urlhostname + '/user/logout';
 	}).fail(function(jqHR, textStatus, errorThrown) {
 		//ajax失敗時の処理
 		alert('メールアドレスの変更に失敗しました。');

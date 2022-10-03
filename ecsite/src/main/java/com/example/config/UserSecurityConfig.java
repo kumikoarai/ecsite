@@ -88,6 +88,7 @@ public class UserSecurityConfig {
                     .antMatchers("/admin/login").permitAll()//直リンクOK
                     .antMatchers("/top/**").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
+                    .antMatchers("/upload/*").permitAll()//直リンクOK
                     .antMatchers("/user/**").hasRole("ENDUSER")
                     .anyRequest().authenticated()
             );
@@ -126,6 +127,7 @@ public class UserSecurityConfig {
                     .antMatchers("/admin/login").permitAll()//直リンクOK
                     .antMatchers("/top/**").permitAll()//直リンクOK
                     .antMatchers("/top/search").permitAll()//直リンクOK
+                    .antMatchers("/upload/*").permitAll()//直リンクOK
                     .antMatchers("/admin/add").hasRole("ADMIN")
                     .antMatchers("/admin/edit/**").hasRole("ADMIN")
                     .antMatchers("/admin/**").hasAnyRole("ADMIN", "GENERAL")

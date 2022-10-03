@@ -24,7 +24,7 @@
 					<label for="file">商品の画像(※500KB以下)</label>
 					<input type="file" name="file" id="file">
 					<th:block th:if="*{productImage != 'なし'}">
-					<img th:src="*{productImage}" id="preview">
+					<img th:src="@{'' + *{productImage} + ''}" id="preview">
 					</th:block>
 					<th:block th:if="*{productImage == 'なし'}"><img id="preview"></th:block>
 					<input type="text" class="form-control" th:field="*{productImage}" readonly>

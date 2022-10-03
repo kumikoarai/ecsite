@@ -1,5 +1,7 @@
 'use strict'
 
+var urlhostname = "https://ecsite-sample-kumiko.net/ecsite";
+
 $(function() {
 	/** 新規登録ボタンを押したら*/
 	$('#btn-signup1').click(function(event) {
@@ -21,14 +23,14 @@ function karitouroku() {
 	$.ajax({
 		type : "POST",
 		cache : false,
-		url : '/user/signup_edit',
+		url : urlhostname + '/user/signup_edit',
 		data: formData,
 		dataType : 'json',
 	}).done(function(data) {
 		//ajax成功時の処理
 		console.log(data);
 		alert("新規の仮登録をしました。");
-		window.location.href='/user/signup_edit';
+		window.location.href= urlhostname + '/user/signup_edit';
 	}).fail(function(jqHR, textStatus, errorThrown) {
 		//ajax失敗時の処理
 		console.log(jqHR);

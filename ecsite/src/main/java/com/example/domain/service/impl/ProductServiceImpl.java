@@ -3,6 +3,10 @@ package com.example.domain.service.impl;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -81,9 +85,7 @@ public class ProductServiceImpl implements ProductService {
 	@Transactional
 	@Override
 	public Integer postProducts(Product product) {
-		//repository.save(product);
 		Product product2 = repository.saveAndFlush(product);
-		//System.out.println("ここはImplの中" + product2);
 		return product2.getProductId();
 	}
 
@@ -110,7 +112,7 @@ public class ProductServiceImpl implements ProductService {
 	    ChannelSftp channelSftp = setupJsch();
 	    channelSftp.connect();
 
-	    String localFile = "src/main/resources/static/upload/" + newName;
+	    String localFile = "/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/" + newName;
 	    String remoteDir = "/var/www/html/product_image/";
 
 	    channelSftp.put(localFile, remoteDir + newName);
@@ -125,8 +127,9 @@ public class ProductServiceImpl implements ProductService {
 	    ChannelSftp channelSftp = setupJsch();
 	    channelSftp.connect();
 
-	    //System.out.println("サーバーの画像削除：" + fileName);
-	    channelSftp.rm("/var/www/html/product_image/" + fileName);
+	    String[] bits = fileName.split("/");
+		String lastOne = bits[bits.length-1];
+	    channelSftp.rm("/var/www/html/product_image/" + lastOne);
 
 	    channelSftp.exit();
 	}
@@ -147,9 +150,10 @@ public class ProductServiceImpl implements ProductService {
             newFileName = new File(formatNowDate + file.getOriginalFilename());
             oldFileName.renameTo(newFileName);
 
-
             // 保存先を定義
-            String uploadPath = "src/main/resources/static/upload/";
+            //String uploadPath = "src/main/resources/static/upload/";←クライアントPC時のパス
+            //↓tomcatへwarファイルで置いた時のパス
+            String uploadPath = "/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/";
             byte[] bytes = file.getBytes();
 
          // 指定ファイルへ読み込みファイルを書き込み
@@ -158,28 +162,34 @@ public class ProductServiceImpl implements ProductService {
             stream.write(bytes);
             stream.close();
 
-         // 圧縮
-            /*File input = new File(uploadPath + newFileName);
-            BufferedImage image = ImageIO.read(input);
-            OutputStream os = new FileOutputStream(input);
-            Iterator<ImageWriter> writers = ImageIO
-                    .getImageWritersByFormatName("jpg");
-            ImageWriter writer = (ImageWriter) writers.next();
-            ImageOutputStream ios = ImageIO.createImageOutputStream(os);
-            writer.setOutput(ios);
-            ImageWriteParam param = new JPEGImageWriteParam(null);
-            param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-            param.setCompressionQuality(0.30f);
-            writer.write(null, new IIOImage(image, null, null), param);
-            os.close();
-            ios.close();
-            writer.dispose();*/
-
 		} catch (Exception e) {
 
 		}
 		return newFileName;
 	}
+
+
+
+	/** 本番環境で商品画像のサーバーからの削除 */
+	@Transactional
+	@Override
+	public void deleteProductImage(String fileName) {
+		if(fileName.equals("なし")) {
+			String[] bits = fileName.split("/");
+			String lastOne = bits[bits.length-1];
+			Path p = Paths.get("/var/www/html/product_image/" + lastOne);
+
+			try{
+			  Files.delete(p);
+			}catch(IOException e){
+			  System.out.println(e);
+			}
+
+		} else {
+
+		}
+	};
+
 
 
 	/** 商品の削除 */

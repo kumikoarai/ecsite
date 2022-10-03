@@ -1,5 +1,6 @@
 'use strict'
 
+var urlhostname = "https://ecsite-sample-kumiko.net/ecsite";
 
 var productData = null;
 
@@ -20,7 +21,7 @@ function search() {
 	//ajax通信
 	$.ajax({
 		type : "GET",
-		url : '/top/search',
+		url : urlhostname + '/top/search',
 		data: formData,
 		dataType : 'json',
 		contentType: 'application/json; charset=UTF-8',
@@ -34,7 +35,7 @@ function search() {
 		//作成
 		$.each(productData, function(index, value) {
 			var pid = Number(value.productId);
-			var url = "/top/product/detail/" + pid;
+			var url = urlhostname + "/top/product/detail/" + pid;
 			if(value.productImage != "なし") {
 				$('#product_ul').append('<li><a href="' + url +'"><img src="' + value.productImage + '"><span class="textone textname">' + value.productName + '</span><span class="textone text-danger">&#165;<span>' + value.price + '</span></span></a></li>');
 			} else {

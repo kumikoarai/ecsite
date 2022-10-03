@@ -18,7 +18,7 @@
 						<div class="itembox">
 							<div class="imgbox">
 								<th:block th:if="*{product.productImage != 'なし'}">
-									<img th:src="*{product.productImage}">
+									<img th:src="@{'' + *{product.productImage} + ''}">
 								</th:block>
 								<th:block th:if="*{product.productImage == 'なし'}">
 									<span class="noimage">画像なし</span>

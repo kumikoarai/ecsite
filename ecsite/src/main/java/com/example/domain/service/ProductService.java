@@ -41,4 +41,6 @@ public interface ProductService {
 	/** 商品の削除 */
 	public void deleteProduct(Integer productId);
 
+	/** 本番環境で商品画像のサーバーからの削除 */
+	public void deleteProductImage(String fileName);
 }

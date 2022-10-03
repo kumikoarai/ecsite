@@ -16,6 +16,7 @@ public class LoginController {
 	@Autowired
 	private LoginCheck loginCheck;
 
+
 	@GetMapping("/login")
 	public String getLoginPage(Model model, Locale locale, @ModelAttribute EndUserForm form) {
 		//ログイン中か判断
@@ -39,4 +40,6 @@ public class LoginController {
 	public String getAdminPage() {
 		return "redirect:/admin/index";
 	}
+
+
 }

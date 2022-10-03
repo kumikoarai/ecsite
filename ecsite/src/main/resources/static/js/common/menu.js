@@ -1,6 +1,6 @@
 $(function() {
 	$("#hamburger_menu").click(function() {
-		console.log("#hamburger_menuをクリックしたよ。aaa");
+		/*console.log("#hamburger_menuをクリックしたよ。aaa");*/
 		var thismenu = $(this);
 		thismenu.toggleClass("horizontal_line");
 		thismenu.toggleClass('cross_line');

@@ -1,5 +1,7 @@
 'use strict'
 
+var urlhostname = "https://ecsite-sample-kumiko.net/ecsite";
+
 $(function() {
 
 	/** 更新ボタンを押したら*/
@@ -33,6 +35,7 @@ $(function() {
 
 /** 管理者の更新処理*/
 function updateAdminUser() {
+
 	//formの値を取得
 	var formData = $('#user-detail-form').serializeArray();
 
@@ -42,14 +45,14 @@ function updateAdminUser() {
 	$.ajax({
 		type : "PUT",
 		cache : false,
-		url : '/admin/update',
+		url : urlhostname + '/admin/update',
 		data: formData,
 		dataType : 'json',
 	}).done(function(data) {
 		//ajax成功時の処理
 		//console.log(data);
 		alert("管理者ユーザーを更新しました。");
-		window.location.href='/admin/admin';
+		window.location.href= urlhostname + '/admin/admin';
 	}).fail(function(jqHR, textStatus, errorThrown) {
 		//ajax失敗時の処理
 		alert('管理者ユーザーの更新に失敗しました。');
@@ -69,14 +72,14 @@ function deleteAdminUser() {
 	$.ajax({
 		type : "DELETE",
 		cache : false,
-		url : '/admin/delete',
+		url : urlhostname + '/admin/delete',
 		data: formData,
 		dataType : 'json',
 	}).done(function(data) {
 		//ajax成功時の処理
 		//console.log(data);
 		alert("管理者ユーザーを削除しました。");
-		window.location.href="/admin/admin";
+		window.location.href= urlhostname + "/admin/admin";
 	}).fail(function(jqHR, textStatus, errorThrown) {
 		//ajax失敗時の処理
 		alert('管理者ユーザーの削除に失敗しました。');

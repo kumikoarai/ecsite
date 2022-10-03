@@ -14,7 +14,7 @@
 			<div class="product_detail_image">
 				<div>
 					<th:block th:if="${product.productImage != 'なし'}">
-						<img th:src="${product.productImage}">
+						<img th:src="@{'' + ${product.productImage} + ''}">
 					</th:block>
 					<th:block th:if="${product.productImage == 'なし'}">
 						<span>画像なし</span>

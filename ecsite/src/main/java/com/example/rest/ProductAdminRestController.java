@@ -1,7 +1,5 @@
 package com.example.rest;
 
-import java.io.File;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,12 +25,18 @@ public class ProductAdminRestController {
 	@DeleteMapping("/delete")
 	public int deleteProduct(ProductForm form) {
 		String oldImage = form.getProductImage();
-		String fileName = new File(oldImage).getName();
-		try {
-			productService.whenDeleteFileUsingJsch_thenSuccess(fileName);
-		} catch (JSchException | SftpException e) {
-			System.out.println("エラー：" + e);
-			e.printStackTrace();
+		//String fileName = new File(oldImage).getName();
+		if (oldImage.equals("なし")) {
+
+		} else {
+			//productService.deleteProductImage(oldImage);
+			try {
+				productService.whenDeleteFileUsingJsch_thenSuccess(oldImage);
+			} catch (JSchException | SftpException e) {
+				System.out.println("エラー：" + e);
+				e.printStackTrace();
+			}
+
 		}
 
 		productCategoryService.deleteProductCategory(form.getProductId());

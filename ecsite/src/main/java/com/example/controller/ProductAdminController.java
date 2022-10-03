@@ -100,6 +100,7 @@ public class ProductAdminController {
 			product.setRelease(true);
 		}
 
+		/*=================================クライアントPCまたはtomcatのwebappsから、サーバーのアプリ外部フォルダへの画像の保存処理↓ここから===============================================*/
 		File newFileName = null;
 		//一旦、フォルダへ、画像の保存
 		if(!file.isEmpty()) {
@@ -110,18 +111,50 @@ public class ProductAdminController {
 				//サーバーへ保存(JSchでのsftp使用)
 				productService.whenUploadFileUsingJsch_thenSuccess(newFileName);
 				//一旦フォルダに保存した画像を削除
-				File deletFile = new File("src/main/resources/static/upload/" + newFileName);
+				File deletFile = new File("/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/" + newFileName);
 				deletFile.delete();
 			} catch (JSchException | SftpException e) {
 				System.out.println("エラー：" + e);
 				e.printStackTrace();
 			}
-			product.setProductImage("http://133.125.62.248/product_image/" + newFileName);
+			product.setProductImage("https://ecsite-sample-kumiko.net/product_image/" + newFileName);
 		} else {
-			System.out.println("画像なし");
+			//System.out.println("画像なし");
 			product.setProductImage("なし");
 		}
+		/*=================================クライアントPCまたはtomcatのwebappsから、サーバーのアプリ外部フォルダへの画像の保存処理↑ここまで===============================================*/
+		/*==============================================tomcatのwebapps下への画像の保存処理↓ここから===============================================*/
+		/*File newFileName = null;
+		if(!file.isEmpty()) {
+			try {
+				// ファイル名をリネイム
+				LocalDateTime nowDate = LocalDateTime.now();
+				DateTimeFormatter dtf3 =
+			            DateTimeFormatter.ofPattern("yyyyMMddHHmm");
+			                String formatNowDate = dtf3.format(nowDate);
+				File oldFileName = new File(file.getOriginalFilename());
+				newFileName = new File(formatNowDate + file.getOriginalFilename());
+				oldFileName.renameTo(newFileName);
 
+				// 保存先を定義
+				String uploadPath = "/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/";
+				//String uploadPath = "/var/www/html/product_image/";
+				byte[] bytes = file.getBytes();
+
+				// 指定ファイルへ読み込みファイルを書き込み
+				BufferedOutputStream stream = new BufferedOutputStream(
+						new FileOutputStream(new File(uploadPath + newFileName)));
+				stream.write(bytes);
+				stream.close();
+
+				product.setProductImage("/upload/" + newFileName.getName());
+			} catch (Exception e) {
+				product.setProductImage("なし");
+			}
+		} else {
+			product.setProductImage("なし");
+		}*/
+		/*==============================================tomcatのwebapps下への画像の保存処理↑ここまで===============================================*/
 
 		Integer id = productService.postProducts(product);
 
@@ -181,6 +214,7 @@ public class ProductAdminController {
 		//もし空じゃなければ、一旦、フォルダへ、画像の保存
 		if(!file.isEmpty()) {
 			File newFileName = null;
+			/*==============================================クライアントPCからサーバーへの画像の保存処理↓ここから===============================================*/
 			newFileName = productService.postProductImageFolder(file);
 
 			try {
@@ -188,18 +222,54 @@ public class ProductAdminController {
 				productService.whenUploadFileUsingJsch_thenSuccess(newFileName);
 				if(!form.getProductImage().isEmpty()) {
 					String oldImage = form.getProductImage();
-					String fileName = new File(oldImage).getName();
+					//String fileName = new File(oldImage).getName();
 					//古い画像のサーバーからの削除
-					productService.whenDeleteFileUsingJsch_thenSuccess(fileName);
+					productService.whenDeleteFileUsingJsch_thenSuccess(oldImage);
 				}
 				//一旦フォルダに保存した画像を削除
-				File deletFile = new File("src/main/resources/static/upload/" + newFileName);
+				File deletFile = new File("/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/" + newFileName);
 				deletFile.delete();
+
 			} catch (JSchException | SftpException e) {
 				System.out.println("エラー：" + e);
 				e.printStackTrace();
 			}
-			form.setProductImage("http://133.125.62.248/product_image/" + newFileName);
+			form.setProductImage("https://ecsite-sample-kumiko.net/product_image/" + newFileName.getName());
+
+			/*==============================================クライアントPCからサーバーへの画像の保存処理↑ここまで===============================================*/
+			/*==============================================本番環境でサーバーへの画像の保存処理↓ここから===============================================*/
+
+			/*try {
+				// ファイル名をリネイム
+				LocalDateTime nowDate = LocalDateTime.now();
+				DateTimeFormatter dtf3 =
+			            DateTimeFormatter.ofPattern("yyyyMMddHHmm");
+			                String formatNowDate = dtf3.format(nowDate);
+				File oldFileName = new File(file.getOriginalFilename());
+				newFileName = new File(formatNowDate + file.getOriginalFilename());
+				oldFileName.renameTo(newFileName);
+
+				// 保存先を定義
+				String uploadPath = "/opt/apache-tomcat-9.0.65/webapps/ecsite/WEB-INF/classes/static/upload/";
+				byte[] bytes = file.getBytes();
+
+				// 指定ファイルへ読み込みファイルを書き込み
+				BufferedOutputStream stream = new BufferedOutputStream(
+						new FileOutputStream(new File(uploadPath + newFileName)));
+				stream.write(bytes);
+				stream.close();
+
+				String[] bits = form.getProductImage().split("/");
+				String lastOne = bits[bits.length-1];
+				productService.deleteProductImage(lastOne);
+
+				form.setProductImage("/upload/" + newFileName.getName());
+
+			} catch (Exception e) {
+				form.setProductImage("なし");
+			}*/
+			/*==============================================本番環境でサーバーへの画像の保存処理↑ここまで===============================================*/
+
 		}
 
 		//商品とカテゴリの連携の登録
@@ -275,9 +345,7 @@ public class ProductAdminController {
 			for(ProductCategory pci : pc) {
 				for(Category ct : categories) {
 					if(pci.getCategoryId() == ct.getCategoryId()) {
-						//System.out.println("名前：" + ct.getCategoryName());
 						ctname.add(new String(ct.getCategoryName()));
-						//product.setCategoryName(ct.getCategoryName());
 					}
 				}
 			}

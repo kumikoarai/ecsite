@@ -85,7 +85,7 @@ public class TopController {
 
 	/** カテゴリ別、商品取得*/
 	@GetMapping("/top/{categoryName}")
-	public String getProductsList(@PathVariable("categoryName") String categoryName, @ModelAttribute TopProductListForm form, Model model) {
+	public String getCategoryProductsList(@PathVariable("categoryName") String categoryName, @ModelAttribute TopProductListForm form, Model model) {
 		//ログイン中か判断
 		String url = loginCheck.getLoginuser("top/index");
 
