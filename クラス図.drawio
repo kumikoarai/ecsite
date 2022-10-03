@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-03T13:08:11.626Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="sZyvj4F_KObNVVOqeeD2" version="20.3.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-03T13:08:51.269Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="A-fNNL8VlrmnR2Du2le2" version="20.3.6" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="780" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -165,7 +165,7 @@
         </mxCell>
         <mxCell id="s7SdXIw9Ny6-5YXZR9oK-6" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1260" y="20" width="250" height="130" as="geometry">
-            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+            <mxRectangle x="1260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="s7SdXIw9Ny6-5YXZR9oK-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="s7SdXIw9Ny6-5YXZR9oK-6">
@@ -174,9 +174,12 @@
         <mxCell id="s7SdXIw9Ny6-5YXZR9oK-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ registerCategory ( category :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Category&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ getCategoruName ( categoryId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : String&lt;br&gt;+ getCategoryId ( categoryName :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="s7SdXIw9Ny6-5YXZR9oK-6">
           <mxGeometry y="60" width="250" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="lYXEJ6027jQ2xtj17Inn-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="s7SdXIw9Ny6-5YXZR9oK-9" target="s7SdXIw9Ny6-5YXZR9oK-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="s7SdXIw9Ny6-5YXZR9oK-9" value="&lt;&lt; Service &gt;&gt;&#xa;CategoryServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1260" y="190" width="250" height="140" as="geometry">
-            <mxRectangle x="610" y="240" width="170" height="26" as="alternateBounds" />
+            <mxRectangle x="1260" y="190" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="lYXEJ6027jQ2xtj17Inn-5" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;- repository : CategoryRepository&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="s7SdXIw9Ny6-5YXZR9oK-9">
@@ -294,6 +297,9 @@
         </mxCell>
         <mxCell id="vnkCy-Avyb73qwJG3XO6-2" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ deleteByUsersId ( usersId : Integer ) : void&lt;br&gt;+ findAllByOrderByUserIdAsc() : List&amp;lt;AdminUser&amp;gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vnkCy-Avyb73qwJG3XO6-0">
           <mxGeometry y="60" width="259" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lYXEJ6027jQ2xtj17Inn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.468;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vnkCy-Avyb73qwJG3XO6-3" target="lYXEJ6027jQ2xtj17Inn-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vnkCy-Avyb73qwJG3XO6-3" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1190" y="630" width="330" height="80" as="geometry">
