@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T10:27:47.273Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="2hUhC6jlIDp-eylmSLxb" version="20.4.0" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-04T10:29:01.939Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="38x6FjFT2UcH2qkJxniP" version="20.4.0" type="github" pages="8">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1921,7 +1921,7 @@
         <mxCell id="1" parent="0" />
         <mxCell id="kFy402hyPOUXU7qpsIoi-1" value="&lt;&lt; Controller&gt;&gt;&#xa;AdminController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="40" width="620" height="160" as="geometry">
-            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+            <mxRectangle x="30" y="40" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kFy402hyPOUXU7qpsIoi-2" value="- adminUserService : AdminUserService&lt;br&gt;- modelMapper : ModelMapper" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="kFy402hyPOUXU7qpsIoi-1">
@@ -1932,6 +1932,17 @@
         </mxCell>
         <mxCell id="kFy402hyPOUXU7qpsIoi-4" value="+ getAdminPage() : String&lt;br&gt;+ getAdminAdminPage ( model : Model ) : String&lt;br&gt;+ getAdminAddPage ( model : Model, locale : Locale, form : AdminUserForm&amp;nbsp;) : String&lt;br&gt;+ postAdminAdd ( model : Model, locale : Locale, form : AdminUserForm, bindingResult : BindingResult ) : String" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="kFy402hyPOUXU7qpsIoi-1">
           <mxGeometry y="90" width="620" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YXvDN3_BZX-CAOBhD-7m-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.508;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="-GME33Bru3muWVBP_P-w-4" target="kFy402hyPOUXU7qpsIoi-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="240" />
+              <mxPoint x="345" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YXvDN3_BZX-CAOBhD-7m-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="-GME33Bru3muWVBP_P-w-4" target="wxD5_wyyJD62jl1MtTzD-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-GME33Bru3muWVBP_P-w-4" value="&lt;&lt; interface &gt;&gt;&#xa;AdminUserService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="280" width="220" height="100" as="geometry">
@@ -1961,6 +1972,9 @@
         <mxCell id="-GME33Bru3muWVBP_P-w-11" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ addAdminUser ( user :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getAdminUser() :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Users&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-8">
           <mxGeometry y="100" width="220" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="YXvDN3_BZX-CAOBhD-7m-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="-GME33Bru3muWVBP_P-w-13" target="-GME33Bru3muWVBP_P-w-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="-GME33Bru3muWVBP_P-w-13" value="&lt;&lt; interface &gt;&gt;&#xa;AdminUserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="640" width="260" height="90" as="geometry">
             <mxRectangle x="960" y="495" width="170" height="26" as="alternateBounds" />
@@ -1988,7 +2002,7 @@
         </mxCell>
         <mxCell id="wxD5_wyyJD62jl1MtTzD-1" value="Users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="280" width="160" height="110" as="geometry">
-            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+            <mxRectangle x="590" y="280" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="wxD5_wyyJD62jl1MtTzD-2" value="- userId : Integer&#xa;- userName : String&#xa;- userEmail : String&#xa;- password : String&#xa;- role : String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="wxD5_wyyJD62jl1MtTzD-1">
@@ -2007,6 +2021,9 @@
         </mxCell>
         <mxCell id="6YYAEpzKqDFk21lMlQS8-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByUserEmailLike ( email :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&lt;br&gt;&lt;/span&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="6YYAEpzKqDFk21lMlQS8-1">
           <mxGeometry y="60" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YXvDN3_BZX-CAOBhD-7m-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="YXvDN3_BZX-CAOBhD-7m-1" target="-GME33Bru3muWVBP_P-w-13">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="YXvDN3_BZX-CAOBhD-7m-1" value="AdminUser" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="290" y="790" width="160" height="70" as="geometry">
