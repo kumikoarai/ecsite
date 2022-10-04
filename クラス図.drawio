@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T11:18:21.480Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="g9Q9ku-IMgbOBD_V_6PO" version="20.4.0" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2022-10-04T11:19:59.852Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="0mTE33XKOrYgwtxucl52" version="20.4.0" type="github" pages="11">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2288,6 +2288,14 @@
         <mxCell id="Jl8gnquDIQTaXx5yshNr-12" value="+ findByProductNameLike( name : String ) : List&amp;lt;Product&amp;gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=0;html=1;" vertex="1" parent="Jl8gnquDIQTaXx5yshNr-10">
           <mxGeometry y="50" width="330" height="30" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="1MJ-_DPic8pDvLYLC-Ku" name="商品編集機能（管理者用）">
+    <mxGraphModel dx="1662" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
