@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T11:44:01.299Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="3ryTlljTZcfPr25FiU2f" version="20.4.0" type="github" pages="12">
+<mxfile host="app.diagrams.net" modified="2022-10-04T11:44:51.370Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="UFR--OtAO36ut9jk8T27" version="20.4.0" type="github" pages="12">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1775,14 +1775,14 @@
         <mxCell id="-OZSDG0_GNGURo2tMIal-3" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#CCCCCC;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="420" y="210" width="382" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="-OZSDG0_GNGURo2tMIal-4" value="管理者用商品リストページの検索機能" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="461" y="190" width="280" height="30" as="geometry" />
+        <mxCell id="-OZSDG0_GNGURo2tMIal-4" value="管理者用&lt;br&gt;商品リストページの&lt;br&gt;検索機能" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="635" y="170" width="151" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-OZSDG0_GNGURo2tMIal-1" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#CCCCCC;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="20" y="210" width="382" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="-OZSDG0_GNGURo2tMIal-2" value="topページと、エンドユーザーtopページの検索機能" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="61" y="190" width="280" height="30" as="geometry" />
+        <mxCell id="-OZSDG0_GNGURo2tMIal-2" value="topページと、&lt;br&gt;エンドユーザーtopページの&lt;br&gt;検索機能" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="31" y="170" width="169" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZxdrV-gGu1Gc2PzOMatw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="VMeybXP8PXl9faUMk6Fc-1" target="ghxW8SozsHfqf3VfEbSv-1">
           <mxGeometry relative="1" as="geometry" />
