@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T09:17:11.669Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="yoD8lJwkRK6luRYaiJ_E" version="20.4.0" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-10-04T09:22:01.836Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Aa08u4mUzSxq77ETeyen" version="20.4.0" type="github" pages="8">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2370" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1911,6 +1911,14 @@
         <mxCell id="iGQRNl0IOicxKuhbEfPn-3" value="+ passwordEncoder() : PasswordEncoder&lt;br&gt;+ users(DataSource dataSource) : UserDetailsManager&lt;br&gt;+ securityFilterChain(HttpSecurity http) : SecurityFilterChain&lt;br&gt;+ securityFilterChain2(HttpSecurity http) : SecurityFilterChain" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="iGQRNl0IOicxKuhbEfPn-1">
           <mxGeometry y="60" width="350" height="70" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Ca4DBmKibRR0RjBZZV0s" name="管理者登録機能（管理者用）">
+    <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
