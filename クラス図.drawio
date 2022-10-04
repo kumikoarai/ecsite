@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T12:44:38.468Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="2tnyB9xcqWrgnTYb8V0D" version="20.4.0" type="github" pages="13">
+<mxfile host="app.diagrams.net" modified="2022-10-04T12:45:18.959Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="aeW8LG-BjRk7RklFCqsv" version="20.4.0" type="github" pages="13">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2758,7 +2758,7 @@
           <mxGeometry y="190" width="720" height="150" as="geometry" />
         </mxCell>
         <mxCell id="P3FDWymzQj58HENKtkEF-1" value="&lt;&lt; RestController&gt;&gt;&#xa;ProductAdminRestController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="850" y="30" width="300" height="120" as="geometry">
+          <mxGeometry x="1510" y="35" width="300" height="120" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -2901,6 +2901,68 @@
         </mxCell>
         <mxCell id="Y6vQ1wtNFCjbg2Y2g9eR-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Y6vQ1wtNFCjbg2Y2g9eR-1">
           <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-1" value="&lt;&lt; interface &gt;&gt;&#xa;ProductOptionService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="175" width="420" height="160" as="geometry">
+            <mxRectangle x="2710" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-1">
+          <mxGeometry y="40" width="420" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ postMaxQuantityAndColor ( productMaxQuantity :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp;productOptionColor :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ updateMaxQuantityAndColor ( productMaxQuantity :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp;productOptionColor :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ getProductMaxQuantity ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;+ getProductOptionColor ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;String&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-1">
+          <mxGeometry y="60" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.03;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="ZFAlk-W65p4JSA14IHGt-5" target="ZFAlk-W65p4JSA14IHGt-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-5" value="&lt;&lt; Service &gt;&gt;&#xa;ProductOptionServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="405" width="420" height="190" as="geometry">
+            <mxRectangle x="2820" y="250" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-6" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;productMaxQuantityRepository :&amp;nbsp;ProductMaxQuantityRepository&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;productOptionColorRepository :&amp;nbsp;ProductOptionColorRepository&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-5">
+          <mxGeometry y="40" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-5">
+          <mxGeometry y="80" width="420" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ postMaxQuantityAndColor ( productMaxQuantity :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp;productOptionColor :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ updateMaxQuantityAndColor ( productMaxQuantity :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp;productOptionColor :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ getProductMaxQuantity ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;+ getProductOptionColor ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;String&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-5">
+          <mxGeometry y="90" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.498;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ZFAlk-W65p4JSA14IHGt-10" target="ZFAlk-W65p4JSA14IHGt-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="912" />
+              <mxPoint x="850" y="665" />
+              <mxPoint x="1064" y="665" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-10" value="&lt;&lt; interface &gt;&gt;&#xa;ProductMaxQuantityRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="885" width="390" height="110" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-11" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-10">
+          <mxGeometry y="40" width="390" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-12" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByProductId ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;updateMaxQuantity ( productId :&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;maxQuantity : Integer ) : Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-10">
+          <mxGeometry y="60" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.498;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ZFAlk-W65p4JSA14IHGt-14" target="ZFAlk-W65p4JSA14IHGt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-14" value="&lt;&lt; interface &gt;&gt;&#xa;ProductOptionColorRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="735" width="350" height="110" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-15" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-14">
+          <mxGeometry y="40" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZFAlk-W65p4JSA14IHGt-16" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByProductId ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ deleteByProductId ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="ZFAlk-W65p4JSA14IHGt-14">
+          <mxGeometry y="60" width="350" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
