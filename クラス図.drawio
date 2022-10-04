@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T10:54:23.966Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="C9A2QECs6CiM07tQNPmC" version="20.4.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-10-04T10:55:04.126Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="5_yIIU2uRJmmTOGF-YdU" version="20.4.0" type="github" pages="9">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2083,9 +2083,12 @@
         <mxCell id="1ut-F6qDsGQ9_5MlsqWo-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="1ut-F6qDsGQ9_5MlsqWo-1">
           <mxGeometry y="90" width="160" height="8" as="geometry" />
         </mxCell>
+        <mxCell id="SyRv3E4M5ngKTZ8yg693-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="pRgjJqOYZVS_-m5vWEZm-1" target="pRgjJqOYZVS_-m5vWEZm-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="pRgjJqOYZVS_-m5vWEZm-1" value="&lt;&lt; interface &gt;&gt;&#xa;UsersRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="700" width="230" height="110" as="geometry">
-            <mxRectangle x="560" y="760" width="170" height="26" as="alternateBounds" />
+            <mxRectangle x="570" y="700" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="pRgjJqOYZVS_-m5vWEZm-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="pRgjJqOYZVS_-m5vWEZm-1">
@@ -2110,7 +2113,7 @@
         </mxCell>
         <mxCell id="pRgjJqOYZVS_-m5vWEZm-8" value="&lt;&lt; Service &gt;&gt;&#xa;AdminUserServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="270" y="450" width="270" height="180" as="geometry">
-            <mxRectangle x="220" y="450" width="170" height="26" as="alternateBounds" />
+            <mxRectangle x="270" y="450" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="pRgjJqOYZVS_-m5vWEZm-9" value="- repository : AdminUserRepository&lt;br&gt;-&amp;nbsp;usersRepository : UsersRepository&lt;br&gt;-&amp;nbsp;encoder : PasswordEncoder" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=1;spacingBottom=0;html=1;" vertex="1" parent="pRgjJqOYZVS_-m5vWEZm-8">
