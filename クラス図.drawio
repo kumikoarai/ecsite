@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T05:22:39.052Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="i0D02SHRaDNWZce1JMNJ" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-04T05:24:08.610Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="WGiXMoNS1pe6netvcHBX" version="20.4.0" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -488,18 +488,18 @@
           <mxGeometry y="60" width="350" height="70" as="geometry" />
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-8" value="&lt;&lt; Controller&gt;&gt;&#xa;AdminController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
-          <mxGeometry x="10" y="440" width="280" height="130" as="geometry">
+          <mxGeometry x="10" y="440" width="560" height="140" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="mvw_WS3R5nrwvQSXtcPQ-3" value="- adminUserService : AdminUserService&lt;br&gt;- modelMapper : ModelMapper" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="_vUU7rvtDNDB7TbRO87P-8">
-          <mxGeometry y="40" width="280" height="40" as="geometry" />
+          <mxGeometry y="40" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-10" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="_vUU7rvtDNDB7TbRO87P-8" vertex="1">
-          <mxGeometry y="80" width="280" height="10" as="geometry" />
+          <mxGeometry y="80" width="560" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="mvw_WS3R5nrwvQSXtcPQ-4" value="+ getAdminPage() : String&lt;br&gt;+ getAdminAdminPage ( model : Model ) : String" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="_vUU7rvtDNDB7TbRO87P-8">
-          <mxGeometry y="90" width="280" height="40" as="geometry" />
+        <mxCell id="mvw_WS3R5nrwvQSXtcPQ-4" value="+ getAdminPage() : String&lt;br&gt;+ getAdminAdminPage ( model : Model ) : String&lt;br&gt;+ getAdminAddPage ( model : Model, locale : Locale, form : AdminUserForm&amp;nbsp;) : String" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="_vUU7rvtDNDB7TbRO87P-8">
+          <mxGeometry y="90" width="560" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-12" value="AuthSecurityContextHolder" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="500" width="230" height="110" as="geometry">
