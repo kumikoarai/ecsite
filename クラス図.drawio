@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T08:40:15.847Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="JF4XAos1k6XacEsF4_ri" version="20.4.0" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-10-04T08:40:40.948Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="L2GouJnYtcuVLrkZ4GKp" version="20.4.0" type="github" pages="6">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2370" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1243,16 +1243,16 @@
     </mxGraphModel>
   </diagram>
   <diagram id="X67ko5wtY6ao7dfkhCyA" name="topページ_商品詳細ページ表示">
-    <mxGraphModel dx="1662" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1955" dy="1073" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="wKXObmWIskXOVQFSm1hC-4" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="320" y="750" width="530" height="230" as="geometry" />
+          <mxGeometry x="320" y="715" width="530" height="230" as="geometry" />
         </mxCell>
         <mxCell id="G1tsrRYfYcfSB7QzXauw-1" value="&lt;&lt; Controller &gt;&gt;&#xa;TopController" style="swimlane;fontStyle=3;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="355" y="790" width="460" height="150" as="geometry">
-            <mxRectangle x="40" y="20" width="160" height="26" as="alternateBounds" />
+          <mxGeometry x="355" y="755" width="460" height="150" as="geometry">
+            <mxRectangle x="355" y="790" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="G1tsrRYfYcfSB7QzXauw-2" value="- productService : ProductService&lt;br&gt;-&amp;nbsp;categories :&amp;nbsp;Categories&lt;br&gt;-&amp;nbsp;loginCheck :&amp;nbsp;LoginCheck&lt;br&gt;-&amp;nbsp;productOptionService :&amp;nbsp;ProductOptionService" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=0;horizontal=1;html=1;spacing=2;" vertex="1" parent="G1tsrRYfYcfSB7QzXauw-1">
@@ -1268,7 +1268,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="i7hsBqXOFsVW6EGcveIe-1" value="CartForm" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="505" y="1010" width="160" height="90" as="geometry">
+          <mxGeometry x="505" y="975" width="160" height="90" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -1525,7 +1525,7 @@
           <mxGeometry y="80" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="-wUnDlg3LAvknsGw8xX4-1" value="共通" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="560" y="730" width="50" height="40" as="geometry" />
+          <mxGeometry x="560" y="695" width="50" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
