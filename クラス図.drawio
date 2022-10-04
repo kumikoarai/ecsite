@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T09:22:01.836Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Aa08u4mUzSxq77ETeyen" version="20.4.0" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-04T10:10:28.210Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ib6WYC5af8YEevkhKvij" version="20.4.0" type="github" pages="8">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2370" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1919,6 +1919,78 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="kFy402hyPOUXU7qpsIoi-1" value="&lt;&lt; Controller&gt;&gt;&#xa;AdminController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="940" width="620" height="170" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kFy402hyPOUXU7qpsIoi-2" value="- adminUserService : AdminUserService&lt;br&gt;- modelMapper : ModelMapper" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="kFy402hyPOUXU7qpsIoi-1">
+          <mxGeometry y="40" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kFy402hyPOUXU7qpsIoi-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="kFy402hyPOUXU7qpsIoi-1">
+          <mxGeometry y="80" width="620" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="kFy402hyPOUXU7qpsIoi-4" value="+ getAdminPage() : String&lt;br&gt;+ getAdminAdminPage ( model : Model ) : String&lt;br&gt;+ getAdminAddPage ( model : Model, locale : Locale, form : AdminUserForm&amp;nbsp;) : String&lt;br&gt;+ postAdminAdd ( model : Model, locale : Locale, form : AdminUserForm, bindingResult : BindingResult ) : String&lt;br&gt;+ getAdminEdit ( model : Model, form : AdminUserForm, userId : Integer) : String" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="kFy402hyPOUXU7qpsIoi-1">
+          <mxGeometry y="90" width="620" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-1" value="&lt;&lt; interface &gt;&gt;&#xa;KariUserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="580" width="330" height="80" as="geometry">
+            <mxRectangle x="560" y="480" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="-GME33Bru3muWVBP_P-w-1">
+          <mxGeometry y="40" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByUserEmailLike ( email :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : KariUser&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-1">
+          <mxGeometry y="60" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-4" value="&lt;&lt; interface &gt;&gt;&#xa;AdminUserService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="20" width="260" height="170" as="geometry">
+            <mxRectangle x="960" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-5" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="-GME33Bru3muWVBP_P-w-4">
+          <mxGeometry y="40" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-6" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ addAdminUser ( user :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getAdminUser() :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Users&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ updateAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&amp;nbsp;password :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&amp;nbsp;userName :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;font face=&quot;Calibri&quot;&gt;+ deleteAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-4">
+          <mxGeometry y="60" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.018;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="-GME33Bru3muWVBP_P-w-8" target="-GME33Bru3muWVBP_P-w-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-8" value="&lt;&lt; Service &gt;&gt;&#xa;AdminUserServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="250" width="260" height="210" as="geometry">
+            <mxRectangle x="960" y="220" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-9" value="- repository : AdminUserRepository&lt;br&gt;-&amp;nbsp;usersRepository : UsersRepository&lt;br&gt;-&amp;nbsp;encoder : PasswordEncoder" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=1;spacingBottom=0;html=1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-8">
+          <mxGeometry y="40" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-10" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="-GME33Bru3muWVBP_P-w-8">
+          <mxGeometry y="90" width="260" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-11" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ addAdminUser ( user :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getAdminUser() :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Users&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ updateAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&amp;nbsp;password :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;,&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;&amp;nbsp;userName :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;font face=&quot;Calibri&quot;&gt;+ deleteAdminUserOne ( userId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;void&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-8">
+          <mxGeometry y="100" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.009;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="-GME33Bru3muWVBP_P-w-13" target="-GME33Bru3muWVBP_P-w-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1410" y="470" />
+              <mxPoint x="1410" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-13" value="&lt;&lt; interface &gt;&gt;&#xa;AdminUserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1281" y="540" width="259" height="100" as="geometry">
+            <mxRectangle x="960" y="495" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-14" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="-GME33Bru3muWVBP_P-w-13">
+          <mxGeometry y="40" width="259" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-GME33Bru3muWVBP_P-w-15" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ deleteByUsersId ( usersId : Integer ) : void&lt;br&gt;+ findAllByOrderByUserIdAsc() : List&amp;lt;AdminUser&amp;gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="-GME33Bru3muWVBP_P-w-13">
+          <mxGeometry y="60" width="259" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
