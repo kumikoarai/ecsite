@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T09:06:22.690Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="pldQe8dYkNrTV5f9lvQ-" version="20.4.0" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-10-04T09:06:41.450Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="SCop4p6hcE6ywX_9Bij5" version="20.4.0" type="github" pages="6">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2370" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -934,7 +934,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="y1kvFIH8P7uXDWMyaSK_" name="topページ表示">
-    <mxGraphModel dx="1457" dy="1024" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2031" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1756,7 +1756,7 @@
           <mxGeometry y="120" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="Q_Yh1jnRyR2UpjU5E5NK-2" value="ショッピングカートのセッションを追加" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="50" width="240" height="30" as="geometry" />
+          <mxGeometry x="1060" y="40" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Q_Yh1jnRyR2UpjU5E5NK-5" value="ショッピングカートのセッションを取得" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="270" y="40" width="240" height="30" as="geometry" />
