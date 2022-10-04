@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T05:18:50.973Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="vMLdIHDSxk8WlHGjgAXX" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-04T05:19:24.092Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="OWLzm4XJKw9Po-upFNoO" version="20.4.0" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -477,15 +477,15 @@
           <mxGeometry y="70" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-6" value="&lt;&lt; Configuration&gt;&gt;&#xa;&lt;&lt; EnableWebSecurity &gt;&gt;&#xa;UserSecurityConfig" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
-          <mxGeometry x="10" y="250" width="340" height="108" as="geometry">
+          <mxGeometry x="10" y="250" width="350" height="128" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="_vUU7rvtDNDB7TbRO87P-6" vertex="1">
-          <mxGeometry y="50" width="340" height="8" as="geometry" />
+          <mxGeometry y="50" width="350" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="mvw_WS3R5nrwvQSXtcPQ-2" value="+ passwordEncoder() : PasswordEncoder&lt;br&gt;+ users(DataSource dataSource) : UserDetailsManager&lt;br&gt;+ securityFilterChain(HttpSecurity http) : SecurityFilterChain" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="_vUU7rvtDNDB7TbRO87P-6">
-          <mxGeometry y="58" width="340" height="50" as="geometry" />
+        <mxCell id="mvw_WS3R5nrwvQSXtcPQ-2" value="+ passwordEncoder() : PasswordEncoder&lt;br&gt;+ users(DataSource dataSource) : UserDetailsManager&lt;br&gt;+ securityFilterChain(HttpSecurity http) : SecurityFilterChain&lt;br&gt;+ securityFilterChain2(HttpSecurity http) : SecurityFilterChain" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="_vUU7rvtDNDB7TbRO87P-6">
+          <mxGeometry y="58" width="350" height="70" as="geometry" />
         </mxCell>
         <mxCell id="_vUU7rvtDNDB7TbRO87P-8" value="&lt;&lt; Controller&gt;&gt;&#xa;AdminController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="370" width="230" height="110" as="geometry">
