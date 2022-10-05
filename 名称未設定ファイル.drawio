@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T11:37:43.553Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="llLwWULgduGCPsB302Zy" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-05T11:38:57.420Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="OUwnCrlKRgRstOtHWiAj" version="20.4.0" type="github" pages="2">
   <diagram id="S5eaGNuj-hXeYqFMLyPz" name="ショッピングカート機能（ユーザー用）">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -382,7 +382,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="IPYs-bAS8jLyu0ZLbYgn" name="アカウント情報編集機能（ユーザー用）">
-    <mxGraphModel dx="1662" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1020" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -401,18 +401,18 @@
           <mxGeometry y="190" width="600" height="70" as="geometry" />
         </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-5" value="&lt;&lt; RestController&gt;&gt;&#xa;UserRestController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="760" y="40" width="600" height="160" as="geometry">
+          <mxGeometry x="760" y="40" width="280" height="140" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="K7xYgwattKHAAb2lNRGU-6" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;modelMapper :&amp;nbsp;ModelMapper&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;userService :&amp;nbsp;UserService&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;session :&amp;nbsp;HttpSession&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-5">
-          <mxGeometry y="40" width="600" height="50" as="geometry" />
+        <mxCell id="K7xYgwattKHAAb2lNRGU-6" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;modelMapper :&amp;nbsp;ModelMapper&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;userService :&amp;nbsp;UserService&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-5">
+          <mxGeometry y="40" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-5">
-          <mxGeometry y="90" width="600" height="10" as="geometry" />
+          <mxGeometry y="80" width="280" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="K7xYgwattKHAAb2lNRGU-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;postUserKari ( form : KariUserForm, bindingResult : BindingResult, request : HttpServletRequest ) : Integer&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;updateUser ( form : EndUserForm ) : Integer&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;updateEmail ( form : EndUserForm ) : Integer&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-5">
-          <mxGeometry y="100" width="600" height="50" as="geometry" />
+        <mxCell id="K7xYgwattKHAAb2lNRGU-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;updateUser ( form : EndUserForm ) : Integer&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;updateEmail ( form : EndUserForm ) : Integer&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-5">
+          <mxGeometry y="90" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-9" value="EndUserForm" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="1159" y="440" width="160" height="170" as="geometry">
