@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T05:57:20.319Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="NwQ0QohiMMBcyWn4HHOQ" version="20.4.0" type="github" pages="14">
+<mxfile host="app.diagrams.net" modified="2022-10-05T05:58:17.127Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="lhBZWxNv0OlSODXNsFUR" version="20.4.0" type="github" pages="15">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2374" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3337,6 +3337,14 @@
         <mxCell id="G6oEKa4qT2AIA86gYIDQ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="kxserdDcQFV95s8yaCO8-2" target="dqPWqJl2BBl_1aP3087z-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="I96JlwjjLFwS6kXfhWXg" name="商品カテゴリ登録機能">
+    <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
