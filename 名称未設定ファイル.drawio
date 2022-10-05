@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T12:05:39.070Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Hjc9N-XiymcJf_nCNwHC" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-05T12:06:33.385Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="hiYZiZIYE_7tysNHXCGS" version="20.4.0" type="github" pages="3">
   <diagram id="S5eaGNuj-hXeYqFMLyPz" name="ショッピングカート機能（ユーザー用）">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -687,6 +687,73 @@
         </mxCell>
         <mxCell id="UgovEPfHPWKg2ts997IA-4" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getAuthSecurityContextHolder() : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;setModelUserName ( model : Model ) : void&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getEndUser ( email : String ) :&amp;nbsp;EndUser&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getUserPage ( form : TopProductListForm, model : Model ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getProductsList ( categoryName : String, form : TopProductListForm, model : Model ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getSignuoEdit ( locale : Locale, form : EndUserForm, model : Model ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;postConfirm ( locale : Locale, form : EndUserForm, bindingResult : BindingResult, model : Model ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;postSignupEndUser ( form : EndUserForm ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getAccount ( model : Model, form : EndUserForm ) : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getOrderList ( model : Model ) : String&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="UgovEPfHPWKg2ts997IA-1">
           <mxGeometry y="190" width="600" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-1" value="&lt;&lt; Controller&gt;&gt;&#xa;Categories" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="240" height="100" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-2" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;- categoryService :&amp;nbsp;CategoryService&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-1">
+          <mxGeometry y="40" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-1">
+          <mxGeometry y="60" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-4" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getCategoryAll ( model : Model ) : void&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-1">
+          <mxGeometry y="70" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="zLat2tGeF9LTxNBhwB45-6" target="zLat2tGeF9LTxNBhwB45-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-6" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="67.5" y="620" width="185" height="80" as="geometry">
+            <mxRectangle x="1260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-6">
+          <mxGeometry y="40" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-6">
+          <mxGeometry y="60" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="zLat2tGeF9LTxNBhwB45-10" target="zLat2tGeF9LTxNBhwB45-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-10" value="&lt;&lt; Service &gt;&gt;&#xa;CategoryServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="67.5" y="770" width="185" height="90" as="geometry">
+            <mxRectangle x="1260" y="190" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-11" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;- repository : CategoryRepository&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-10">
+          <mxGeometry y="40" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-12" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-10">
+          <mxGeometry y="60" width="185" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-13" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-10">
+          <mxGeometry y="70" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="zLat2tGeF9LTxNBhwB45-15" target="zLat2tGeF9LTxNBhwB45-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-15" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="920" width="160" height="70" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-16" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-15">
+          <mxGeometry y="40" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-17" value="Category" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1085" width="160" height="70" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-18" value="- categoryId : Integer&#xa;- categoryName : String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-17">
+          <mxGeometry y="26" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="zLat2tGeF9LTxNBhwB45-19" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="zLat2tGeF9LTxNBhwB45-17">
+          <mxGeometry y="60" width="160" height="8" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
