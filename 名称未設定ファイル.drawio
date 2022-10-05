@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T11:47:46.635Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="7EPI-HR8q-QjaSEHLBzu" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-05T11:57:12.243Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="_mR8ooHxPYb2GyHkOx7N" version="20.4.0" type="github" pages="2">
   <diagram id="S5eaGNuj-hXeYqFMLyPz" name="ショッピングカート機能（ユーザー用）">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -386,6 +386,25 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-1" target="3EGXaRmtyPgIBQU_Sv_1-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-1" target="_tm9tDfYJ20g8TuUcSig-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-1" target="_tm9tDfYJ20g8TuUcSig-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="280" />
+              <mxPoint x="700" y="280" />
+              <mxPoint x="700" y="540" />
+              <mxPoint x="915" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-1" target="_tm9tDfYJ20g8TuUcSig-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-1" value="&lt;&lt; Controller&gt;&gt;&#xa;UserController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="40" width="360" height="200" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
@@ -400,8 +419,17 @@
         <mxCell id="K7xYgwattKHAAb2lNRGU-4" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getAuthSecurityContextHolder() : String&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;setModelUserName ( model : Model ) : void&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;+&amp;nbsp;getEndUser ( email : String ) :&amp;nbsp;EndUser&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;getAccount ( model : Model, form : EndUserForm ) : String&lt;/span&gt;&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="K7xYgwattKHAAb2lNRGU-1">
           <mxGeometry y="120" width="360" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-5" target="_tm9tDfYJ20g8TuUcSig-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-5" target="K7xYgwattKHAAb2lNRGU-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_tm9tDfYJ20g8TuUcSig-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="K7xYgwattKHAAb2lNRGU-5" target="_tm9tDfYJ20g8TuUcSig-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-5" value="&lt;&lt; RestController&gt;&gt;&#xa;UserRestController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="40" width="280" height="140" as="geometry">
+          <mxGeometry x="940" y="40" width="280" height="140" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -415,7 +443,7 @@
           <mxGeometry y="90" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="K7xYgwattKHAAb2lNRGU-9" value="EndUserForm" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1250" y="320" width="160" height="170" as="geometry">
+          <mxGeometry x="1250" y="280" width="160" height="170" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -493,8 +521,8 @@
           <mxGeometry y="60" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-1" value="&lt;&lt; interface &gt;&gt;&#xa;UserService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="879" y="320" width="330" height="110" as="geometry">
-            <mxRectangle x="560" y="20" width="170" height="26" as="alternateBounds" />
+          <mxGeometry x="915" y="530" width="330" height="110" as="geometry">
+            <mxRectangle x="915" y="530" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="_tm9tDfYJ20g8TuUcSig-1">
@@ -507,7 +535,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-5" value="&lt;&lt; Service &gt;&gt;&#xa;UserServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="879" y="490" width="330" height="160" as="geometry">
+          <mxGeometry x="915" y="700" width="330" height="160" as="geometry">
             <mxRectangle x="330" y="690" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -521,7 +549,7 @@
           <mxGeometry y="100" width="330" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-10" value="&lt;&lt; interface &gt;&gt;&#xa;UsersRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="924" y="700" width="240" height="170" as="geometry">
+          <mxGeometry x="950" y="910" width="240" height="170" as="geometry">
             <mxRectangle x="560" y="760" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -532,7 +560,7 @@
           <mxGeometry y="60" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-13" value="Users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="964" y="925" width="160" height="110" as="geometry">
+          <mxGeometry x="1311" y="760" width="160" height="110" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -596,8 +624,8 @@
           <mxGeometry y="120" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-31" value="EndUser" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="680" y="320" width="160" height="180" as="geometry">
-            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          <mxGeometry x="760" y="320" width="160" height="180" as="geometry">
+            <mxRectangle x="680" y="320" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-32" value="- userId : Integer&#xa;- userName : String&#xa;- userEmail : String&#xa;- password : String&#xa;- role : String&#xa;- birthday : Date&#xa;- gender : Integer&#xa;- address : String&#xa;- phoneNumber : Integer&#xa;- usersId : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_tm9tDfYJ20g8TuUcSig-31">
@@ -607,7 +635,7 @@
           <mxGeometry y="170" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="_tm9tDfYJ20g8TuUcSig-46" value="&lt;&lt; interface &gt;&gt;&#xa;UserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1200" y="700" width="330" height="140" as="geometry">
+          <mxGeometry x="1226" y="910" width="330" height="140" as="geometry">
             <mxRectangle x="560" y="590" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
