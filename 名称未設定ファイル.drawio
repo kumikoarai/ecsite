@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T12:47:57.175Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="dtWxv0SZklgpEifAMt8s" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-05T12:48:50.900Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="9H86Gsbra56BF-Z1FZc5" version="20.4.0" type="github" pages="3">
   <diagram id="S5eaGNuj-hXeYqFMLyPz" name="ショッピングカート機能（ユーザー用）">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -674,6 +674,12 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="LoX4k47Dpk5cMh27CXsk-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="932.5" width="1960" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="LoX4k47Dpk5cMh27CXsk-2" value="共通" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="995" y="910" width="50" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="UgovEPfHPWKg2ts997IA-1" value="&lt;&lt; Controller&gt;&gt;&#xa;UserController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="40" width="280" height="210" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
