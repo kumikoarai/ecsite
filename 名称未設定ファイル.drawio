@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T12:07:46.695Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="KLvtpg1bVy-K4gJA2xGf" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-10-05T12:09:33.416Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="9b2A9SXlvT2NHCe9-PBJ" version="20.4.0" type="github" pages="3">
   <diagram id="S5eaGNuj-hXeYqFMLyPz" name="ショッピングカート機能（ユーザー用）">
     <mxGraphModel dx="2770" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -800,14 +800,8 @@
         <mxCell id="w1Mws130Cjg708xkTYtv-13" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByUserEmailLike ( email :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+&amp;nbsp;updateEndUser ( userId : Integer,&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;password : String,&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;userName : String,&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;userEmail : String ) : Integer&lt;/font&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;div&gt;&lt;font face=&quot;Calibri&quot;&gt;+&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;updateEndUserEmail ( userId : Integer,&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;userEmail : String ) : Integer&lt;/font&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="w1Mws130Cjg708xkTYtv-11">
           <mxGeometry y="60" width="240" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="w1Mws130Cjg708xkTYtv-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="w1Mws130Cjg708xkTYtv-16" target="w1Mws130Cjg708xkTYtv-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="w1Mws130Cjg708xkTYtv-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="w1Mws130Cjg708xkTYtv-16" target="w1Mws130Cjg708xkTYtv-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="w1Mws130Cjg708xkTYtv-16" value="Users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="910" y="830" width="160" height="110" as="geometry">
+          <mxGeometry x="880" y="440" width="160" height="110" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -827,9 +821,6 @@
         </mxCell>
         <mxCell id="w1Mws130Cjg708xkTYtv-21" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;updateEndUser ( userId :&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;birthday :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Date&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;address :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;phoneNumber :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;) :&amp;nbsp; Integer&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="w1Mws130Cjg708xkTYtv-19">
           <mxGeometry y="60" width="260" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="w1Mws130Cjg708xkTYtv-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="w1Mws130Cjg708xkTYtv-17" target="w1Mws130Cjg708xkTYtv-11">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="od7O7E_pwHDQpQMUNiE4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="od7O7E_pwHDQpQMUNiE4-2" target="od7O7E_pwHDQpQMUNiE4-9">
           <mxGeometry relative="1" as="geometry" />
@@ -883,6 +874,28 @@
         </mxCell>
         <mxCell id="od7O7E_pwHDQpQMUNiE4-15" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="od7O7E_pwHDQpQMUNiE4-13">
           <mxGeometry y="120" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-1" value="EndUser" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="440" width="160" height="180" as="geometry">
+            <mxRectangle x="680" y="320" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-2" value="- userId : Integer&#xa;- userName : String&#xa;- userEmail : String&#xa;- password : String&#xa;- role : String&#xa;- birthday : Date&#xa;- gender : Integer&#xa;- address : String&#xa;- phoneNumber : Integer&#xa;- usersId : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="tip3gOqRT2pLYFVHP1_P-1">
+          <mxGeometry y="26" width="160" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="tip3gOqRT2pLYFVHP1_P-1">
+          <mxGeometry y="170" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-4" value="ProductOrder" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1680" y="440" width="160" height="100" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-5" value="- orderId : Integer&#xa;- userId : Integer&#xa;- orderDate : Date&#xa;- totalPrice : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="tip3gOqRT2pLYFVHP1_P-4">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="tip3gOqRT2pLYFVHP1_P-6" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="tip3gOqRT2pLYFVHP1_P-4">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
