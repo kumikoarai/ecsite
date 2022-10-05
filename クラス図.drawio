@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T06:04:25.427Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="orNJhpgP821-N5d3-VL7" version="20.4.0" type="github" pages="15">
+<mxfile host="app.diagrams.net" modified="2022-10-05T06:09:35.695Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="rmR8S1ZNwMMjOBcdV9Ot" version="20.4.0" type="github" pages="15">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2031" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2739,7 +2739,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="QBorbseffk_tauRRN9Xg" name="商品編集機能（管理者用）">
-    <mxGraphModel dx="2489" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2249" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3345,6 +3345,12 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="7IZ30u-fVss8fbX1aOyY-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="390" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7IZ30u-fVss8fbX1aOyY-2" value="共通" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="155" y="370" width="50" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="1pG9s1kro32ZAGshr2yF-1" value="&lt;&lt; Controller&gt;&gt;&#xa;ProductAdminController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="20" width="620" height="150" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
@@ -3360,7 +3366,7 @@
           <mxGeometry y="100" width="620" height="40" as="geometry" />
         </mxCell>
         <mxCell id="riRZO_K4ViWYJHZr8QKn-1" value="CategoryForm" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="400" width="160" height="70" as="geometry">
+          <mxGeometry x="100" y="240" width="160" height="70" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -3371,7 +3377,7 @@
           <mxGeometry y="60" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="ZD0cbbpZpYC79wkdOTZV-1" value="Category" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="510" width="160" height="70" as="geometry">
+          <mxGeometry x="100" y="425" width="160" height="70" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -3382,22 +3388,22 @@
           <mxGeometry y="60" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-1" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="20" width="250" height="130" as="geometry">
-            <mxRectangle x="1260" y="20" width="170" height="26" as="alternateBounds" />
+          <mxGeometry x="390" y="240" width="250" height="100" as="geometry">
+            <mxRectangle x="280" y="210" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="sirM-8NXBcrefhkF_35e-1">
           <mxGeometry y="40" width="250" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="sirM-8NXBcrefhkF_35e-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ registerCategory ( category :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Category&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ getCategoruName ( categoryId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : String&lt;br&gt;+ getCategoryId ( categoryName :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="sirM-8NXBcrefhkF_35e-1">
-          <mxGeometry y="60" width="250" height="70" as="geometry" />
+        <mxCell id="sirM-8NXBcrefhkF_35e-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ registerCategory ( category :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Category&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="sirM-8NXBcrefhkF_35e-1">
+          <mxGeometry y="60" width="250" height="40" as="geometry" />
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="sirM-8NXBcrefhkF_35e-5" target="sirM-8NXBcrefhkF_35e-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-5" value="&lt;&lt; Service &gt;&gt;&#xa;CategoryServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="220" width="250" height="140" as="geometry">
-            <mxRectangle x="1260" y="190" width="170" height="26" as="alternateBounds" />
+          <mxGeometry x="390" y="410" width="250" height="110" as="geometry">
+            <mxRectangle x="280" y="410" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-6" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;- repository : CategoryRepository&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="sirM-8NXBcrefhkF_35e-5">
@@ -3406,14 +3412,14 @@
         <mxCell id="sirM-8NXBcrefhkF_35e-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="sirM-8NXBcrefhkF_35e-5">
           <mxGeometry y="60" width="250" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="sirM-8NXBcrefhkF_35e-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ registerCategory ( category :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Category&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;+ getCategoruName ( categoryId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : String&lt;br&gt;+ getCategoryId ( categoryName :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="sirM-8NXBcrefhkF_35e-5">
-          <mxGeometry y="70" width="250" height="70" as="geometry" />
+        <mxCell id="sirM-8NXBcrefhkF_35e-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getCategories () :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;Category&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+ registerCategory ( category :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Category&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="sirM-8NXBcrefhkF_35e-5">
+          <mxGeometry y="70" width="250" height="40" as="geometry" />
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="sirM-8NXBcrefhkF_35e-10" target="sirM-8NXBcrefhkF_35e-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sirM-8NXBcrefhkF_35e-10" value="&lt;&lt; interface &gt;&gt;&#xa;CategoryRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="430" width="330" height="80" as="geometry">
+          <mxGeometry x="350" y="600" width="330" height="80" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
