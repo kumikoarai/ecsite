@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T06:43:49.690Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="cGVlgQ2wtltIXvKHBvX5" version="20.4.0" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2022-10-05T06:45:02.812Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="oEEPvtejBsL-a7DFvFKO" version="20.4.0" type="github" pages="16">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2031" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3341,7 +3341,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="I96JlwjjLFwS6kXfhWXg" name="商品カテゴリ登録機能">
-    <mxGraphModel dx="1422" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1662" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3443,6 +3443,12 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="wfTaUXbgxpauXkuUf0Z8-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="22" y="880" width="1568" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wfTaUXbgxpauXkuUf0Z8-2" value="共通" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="781" y="860" width="50" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="0Dl4QXMNSq0jPLpdN0LE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="iO5xugd8TMzv4IsOEEd0-1" target="HdFvx0_dgcXWsfYMYYzI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
