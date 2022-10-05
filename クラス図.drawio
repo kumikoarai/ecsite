@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T05:52:41.278Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="UTyPD-oLNCZUtlLP4B2D" version="20.4.0" type="github" pages="14">
+<mxfile host="app.diagrams.net" modified="2022-10-05T05:52:56.889Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="W2092qjLHnnOWDeeCde7" version="20.4.0" type="github" pages="14">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2374" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3138,38 +3138,38 @@
           <mxGeometry y="120" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-1" value="&lt;&lt; interface &gt;&gt;&#xa;ProductService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="360" width="370" height="110" as="geometry">
+          <mxGeometry x="360" y="360" width="340" height="110" as="geometry">
             <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-2" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="tXmlXsEnxlSnIpVfbhKl-1">
-          <mxGeometry y="40" width="370" height="20" as="geometry" />
+          <mxGeometry y="40" width="340" height="20" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-3" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;postProducts&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;( product : Product ) : Integer&lt;/span&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ whenUploadFileUsingJsch_thenSuccess&amp;nbsp;( newName :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;File&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;+ postProductImageFolder ( file :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;MultipartFile&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : File&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="tXmlXsEnxlSnIpVfbhKl-1">
-          <mxGeometry y="60" width="370" height="50" as="geometry" />
+          <mxGeometry y="60" width="340" height="50" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="tXmlXsEnxlSnIpVfbhKl-5" target="tXmlXsEnxlSnIpVfbhKl-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-5" value="&lt;&lt; Service &gt;&gt;&#xa;ProductServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="530" width="370" height="180" as="geometry">
+          <mxGeometry x="360" y="530" width="340" height="180" as="geometry">
             <mxRectangle x="260" y="180" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-6" value="- repository : ProductRepository&lt;br&gt;-&amp;nbsp;remoteHost : String&lt;br&gt;-&amp;nbsp;username : String&lt;br&gt;-&amp;nbsp;password : String&lt;br&gt;-&amp;nbsp;setupJsch () :&amp;nbsp;ChannelSftp" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=1;spacingBottom=0;html=1;" vertex="1" parent="tXmlXsEnxlSnIpVfbhKl-5">
-          <mxGeometry y="40" width="370" height="80" as="geometry" />
+          <mxGeometry y="40" width="340" height="80" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="tXmlXsEnxlSnIpVfbhKl-5">
-          <mxGeometry y="120" width="370" height="10" as="geometry" />
+          <mxGeometry y="120" width="340" height="10" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-8" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 9pt; font-family: Calibri;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 9pt; font-family: Calibri;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 9pt; font-family: Calibri;&quot;&gt;postProducts&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 9pt; font-family: Calibri;&quot;&gt;( product : Product ) : Integer&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;font face=&quot;Calibri&quot;&gt;+ whenUploadFileUsingJsch_thenSuccess&amp;nbsp;( newName :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;File&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : void&lt;br&gt;&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;+ postProductImageFolder ( file :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;MultipartFile&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : File&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="tXmlXsEnxlSnIpVfbhKl-5">
-          <mxGeometry y="130" width="370" height="50" as="geometry" />
+          <mxGeometry y="130" width="340" height="50" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="tXmlXsEnxlSnIpVfbhKl-10" target="tXmlXsEnxlSnIpVfbhKl-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tXmlXsEnxlSnIpVfbhKl-10" value="&lt;&lt; interface &gt;&gt;&#xa;ProductRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="785" width="150" height="70" as="geometry">
+          <mxGeometry x="455" y="770" width="150" height="70" as="geometry">
             <mxRectangle x="225" y="360" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
