@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T07:15:29.520Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="UX5AtCUiiGOGSSHYUmw4" version="20.4.0" type="github" pages="17">
+<mxfile host="app.diagrams.net" modified="2022-10-05T07:16:08.236Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="LCHOiuf3DOOhVe4gn5uL" version="20.4.0" type="github" pages="17">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2374" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3732,7 +3732,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="d0c_H8gSr3hrOyLhunZM" name="商品リスト表示（ユーザー用）">
-    <mxGraphModel dx="1662" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1020" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
