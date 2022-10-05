@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-05T06:16:28.961Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="rNUBmGn8ql-3tgPAlYcU" version="20.4.0" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2022-10-05T06:18:35.405Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="IBLIUUL36YRUdbX5LKKL" version="20.4.0" type="github" pages="16">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="service">
     <mxGraphModel dx="2031" dy="1303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3681,6 +3681,70 @@
         </mxCell>
         <mxCell id="9mGxQ2SEQ5FcDzi2YG0x-12" value="+&amp;nbsp;findByProductNameLikeAndReleaseIs ( name :String&amp;nbsp;, release :boolean&amp;nbsp;) :&amp;nbsp;List&amp;lt;Product&amp;gt;&lt;br&gt;+ findByProductNameLike( name : String ) : List&amp;lt;Product&amp;gt;&lt;br&gt;+ findByProductImageLike(image : String&amp;nbsp;) : Product&lt;br&gt;+&amp;nbsp;findAllByOrderByProductIdAsc() :&amp;nbsp;List&amp;lt;Product&amp;gt;&lt;br&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;updateProduct ( userId :&amp;nbsp;&lt;/span&gt;Integer&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;productImage :&amp;nbsp;&lt;/span&gt;String,&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;productName :&amp;nbsp;&lt;/span&gt;String&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;productDescription :&amp;nbsp;&lt;/span&gt;String&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;price :&amp;nbsp;&lt;/span&gt;Integer&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;release :&lt;/span&gt;boolean&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;) :&amp;nbsp;Integer&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=0;html=1;" vertex="1" parent="9mGxQ2SEQ5FcDzi2YG0x-10">
           <mxGeometry y="50" width="490" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="gFipovFdyTnIF_kA3d2S-1" value="Users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="570" width="160" height="110" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFipovFdyTnIF_kA3d2S-2" value="- userId : Integer&#xa;- userName : String&#xa;- userEmail : String&#xa;- password : String&#xa;- role : String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="gFipovFdyTnIF_kA3d2S-1">
+          <mxGeometry y="26" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="gFipovFdyTnIF_kA3d2S-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="gFipovFdyTnIF_kA3d2S-1">
+          <mxGeometry y="100" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="E4UycNJghbDc_iQYt-Wm-1" value="EndUserSignup" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="410" width="160" height="130" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E4UycNJghbDc_iQYt-Wm-2" value="- userId : Integer&#xa;- birthday : Date&#xa;- gender : Integer&#xa;- address : String&#xa;- phoneNumber : Integer&#xa;- usersId : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="E4UycNJghbDc_iQYt-Wm-1">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="E4UycNJghbDc_iQYt-Wm-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="E4UycNJghbDc_iQYt-Wm-1">
+          <mxGeometry y="120" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="RBJg1hfKTHVj78uAs16W-2" target="RBJg1hfKTHVj78uAs16W-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-2" value="&lt;&lt; interface &gt;&gt;&#xa;UserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2565" y="330" width="330" height="140" as="geometry">
+            <mxRectangle x="560" y="590" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-2">
+          <mxGeometry y="40" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-4" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByUsersId ( usersId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;EndUserSignup&lt;br&gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;updateEndUser ( userId :&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;birthday :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Date&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;address :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;phoneNumber :&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Calibri; background-color: initial;&quot;&gt;) :&amp;nbsp; Integer&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-2">
+          <mxGeometry y="60" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-5" value="&lt;&lt; interface &gt;&gt;&#xa;EndUserService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2580" y="20" width="300" height="90" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-6" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-5">
+          <mxGeometry y="40" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-7" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getEndUserSignupjoho ( usersId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;EndUserSignup&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-5">
+          <mxGeometry y="60" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="RBJg1hfKTHVj78uAs16W-9" target="RBJg1hfKTHVj78uAs16W-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-9" value="&lt;&lt; Service &gt;&gt;&#xa;EndUserServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2580" y="160" width="300" height="100" as="geometry">
+            <mxRectangle x="610" y="240" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-10" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;- userRepository&amp;nbsp;: UserRepository&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-9">
+          <mxGeometry y="40" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-11" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-9">
+          <mxGeometry y="60" width="300" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RBJg1hfKTHVj78uAs16W-12" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getEndUserSignupjoho ( usersId :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;EndUserSignup&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="RBJg1hfKTHVj78uAs16W-9">
+          <mxGeometry y="70" width="300" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
