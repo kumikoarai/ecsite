@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-06T14:11:07.296Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="m5f1O5k21_KqEmN84a0j" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-06T14:11:36.915Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="mB9anreD3uHdRocvYXrH" version="20.4.0" type="github" pages="2">
   <diagram id="y7Xx6m-XWy_Zry9XMPmJ" name="topページ表示">
     <mxGraphModel dx="1662" dy="2081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -307,6 +307,297 @@
         </mxCell>
         <mxCell id="B7lAWky7L1ucUZageSKD-84" value="topページ表示" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;labelBackgroundColor=none;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="15" y="-50" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ZPM02WXlF1D3Gg9zUPVi" name="topページ_商品詳細ページ表示">
+    <mxGraphModel dx="1662" dy="2081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#B3B3B3;strokeWidth=3;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="690" width="530" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-2" value="&lt;&lt; Controller &gt;&gt;&#xa;TopController" style="swimlane;fontStyle=3;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="730" width="460" height="150" as="geometry">
+            <mxRectangle x="355" y="790" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-3" value="- productService : ProductService&lt;br&gt;-&amp;nbsp;categories :&amp;nbsp;Categories&lt;br&gt;-&amp;nbsp;loginCheck :&amp;nbsp;LoginCheck&lt;br&gt;-&amp;nbsp;productOptionService :&amp;nbsp;ProductOptionService" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=0;horizontal=1;html=1;spacing=2;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-2">
+          <mxGeometry y="40" width="460" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-4" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-2">
+          <mxGeometry y="110" width="460" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-5" value="+ getProductDetailPage(&amp;nbsp;productId :&amp;nbsp;Integer,&amp;nbsp;model :&amp;nbsp;Model,&amp;nbsp;form :&amp;nbsp;CartForm ) :&amp;nbsp;String" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;html=1;spacing=2;spacingTop=0;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-2">
+          <mxGeometry y="120" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-7" target="vErNEw2Sg_INZIUIIfxX-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-7" value="CartForm" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="950" width="160" height="90" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-8" value="- productId : Integer&#xa;- quantity : Integer&#xa;- product_color : String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-7">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-9" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-7">
+          <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-10" value="&lt;&lt; Component &gt;&gt;&#xa;LoginCheck" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="15" y="20" width="230" height="110" as="geometry">
+            <mxRectangle x="15" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-11" value="- userService : UserService" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-10">
+          <mxGeometry y="40" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-12" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-10">
+          <mxGeometry y="60" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-13" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;getLoginuser&amp;nbsp;&lt;span style=&quot;font-size: 9pt;&quot;&gt;( &lt;/span&gt;motourl&lt;span style=&quot;font-size: 9pt;&quot;&gt;&amp;nbsp;:&amp;nbsp;&lt;/span&gt;String&amp;nbsp;&lt;span style=&quot;font-size: 9pt;&quot;&gt;) &lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 9pt; font-family: Calibri;&quot;&gt;: String&lt;/span&gt;&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-10">
+          <mxGeometry y="80" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-15" target="vErNEw2Sg_INZIUIIfxX-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-15" value="&lt;&lt; interface &gt;&gt;&#xa;UserService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="17.5" y="170" width="225" height="80" as="geometry">
+            <mxRectangle x="17.5" y="170" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-16" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-15">
+          <mxGeometry y="40" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-17" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getUsersOne ( userEmail :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Users&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-15">
+          <mxGeometry y="60" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-19" target="vErNEw2Sg_INZIUIIfxX-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-19" value="&lt;&lt; Service &gt;&gt;&#xa;UserServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="17.5" y="300" width="225" height="100" as="geometry">
+            <mxRectangle x="17.5" y="300" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-20" value="-&amp;nbsp;usersRepository : UsersRepository" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=1;spacingBottom=0;html=1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-19">
+          <mxGeometry y="40" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-21" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-19">
+          <mxGeometry y="60" width="225" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-22" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getUsersOne ( userEmail :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Users&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-19">
+          <mxGeometry y="70" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-24" target="vErNEw2Sg_INZIUIIfxX-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-24" value="&lt;&lt; interface &gt;&gt;&#xa;UsersRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="12.5" y="440" width="235" height="90" as="geometry">
+            <mxRectangle x="12.5" y="440" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-25" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-24">
+          <mxGeometry y="40" width="235" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-26" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByUserEmailLike ( email :&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;String&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Users&lt;br&gt;&lt;/span&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-24">
+          <mxGeometry y="60" width="235" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-29" target="vErNEw2Sg_INZIUIIfxX-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.996;entryY=0.192;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-29" target="vErNEw2Sg_INZIUIIfxX-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="560" />
+              <mxPoint x="270" y="560" />
+              <mxPoint x="270" y="319" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-29" value="Users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="585" width="160" height="110" as="geometry">
+            <mxRectangle x="50" y="585" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-30" value="- userId : Integer&#xa;- userName : String&#xa;- userEmail : String&#xa;- password : String&#xa;- role : String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-29">
+          <mxGeometry y="26" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-31" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-29">
+          <mxGeometry y="100" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-29" target="vErNEw2Sg_INZIUIIfxX-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="560" />
+              <mxPoint x="270" y="560" />
+              <mxPoint x="270" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-33" value="&lt;&lt; interface &gt;&gt;&#xa;ProductService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="20" width="260" height="90" as="geometry">
+            <mxRectangle x="320" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-34" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-33">
+          <mxGeometry y="40" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-35" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getProductsOne ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Product&lt;/font&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-33">
+          <mxGeometry y="60" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-37" target="vErNEw2Sg_INZIUIIfxX-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-37" value="&lt;&lt; Service &gt;&gt;&#xa;ProductServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="170" width="260" height="100" as="geometry">
+            <mxRectangle x="320" y="170" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-38" value="- repository : ProductRepository" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;spacingTop=1;spacingBottom=0;html=1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-37">
+          <mxGeometry y="40" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-39" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-37">
+          <mxGeometry y="60" width="260" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-40" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;font style=&quot;background-color: initial;&quot; face=&quot;Calibri&quot;&gt;+ getProductsOne ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial; font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font style=&quot;background-color: initial;&quot; face=&quot;Calibri&quot;&gt;) : Product&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-37">
+          <mxGeometry y="70" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-42" target="vErNEw2Sg_INZIUIIfxX-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-42" value="&lt;&lt; interface &gt;&gt;&#xa;ProductRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="320" width="250" height="60" as="geometry">
+            <mxRectangle x="325" y="320" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-43" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-42">
+          <mxGeometry y="30" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-47" target="vErNEw2Sg_INZIUIIfxX-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-47" target="vErNEw2Sg_INZIUIIfxX-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="400" />
+              <mxPoint x="600" y="400" />
+              <mxPoint x="600" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-47" target="vErNEw2Sg_INZIUIIfxX-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="400" />
+              <mxPoint x="600" y="400" />
+              <mxPoint x="600" y="43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-47" value="Product" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="430" width="160" height="130" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-48" value="- productId : Integer&#xa;- productImage : String&#xa;- productName : String&#xa;- productDescription : String&#xa;- price : Integer&#xa;- release : boolean" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-47">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-49" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-47">
+          <mxGeometry y="120" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-50" value="&lt;&lt; interface &gt;&gt;&#xa;ProductOptionService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="20" width="355" height="100" as="geometry">
+            <mxRectangle x="2710" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-51" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-50">
+          <mxGeometry y="40" width="355" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-52" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getProductMaxQuantity ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;+ getProductOptionColor ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;String&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-50">
+          <mxGeometry y="60" width="355" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.03;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-54" target="vErNEw2Sg_INZIUIIfxX-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-54" value="&lt;&lt; Service &gt;&gt;&#xa;ProductOptionServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="180" width="355" height="130" as="geometry">
+            <mxRectangle x="680" y="180" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-55" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;productMaxQuantityRepository :&amp;nbsp;ProductMaxQuantityRepository&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;-&amp;nbsp;productOptionColorRepository :&amp;nbsp;ProductOptionColorRepository&lt;/p&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-54">
+          <mxGeometry y="40" width="355" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-56" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-54">
+          <mxGeometry y="80" width="355" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-57" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ getProductMaxQuantity ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) : Integer&lt;br&gt;+ getProductOptionColor ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;String&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-54">
+          <mxGeometry y="90" width="355" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-59" target="vErNEw2Sg_INZIUIIfxX-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-59" value="&lt;&lt; interface &gt;&gt;&#xa;ProductMaxQuantityRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="370" width="320" height="90" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-60" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-59">
+          <mxGeometry y="40" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-61" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByProductId ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;ProductMaxQuantity&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-59">
+          <mxGeometry y="60" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.498;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-63" target="vErNEw2Sg_INZIUIIfxX-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-63" value="&lt;&lt; interface &gt;&gt;&#xa;ProductOptionColorRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="682.5" y="370" width="350" height="90" as="geometry">
+            <mxRectangle x="260" y="20" width="170" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-64" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-63">
+          <mxGeometry y="40" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-65" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;/p&gt;&lt;font face=&quot;Calibri&quot;&gt;+ findByProductId ( productId :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;Integer&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;) :&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;List&amp;lt;ProductOptionColor&amp;gt;&lt;/span&gt;&lt;font face=&quot;Calibri&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacing=2;html=1;spacingTop=-1;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-63">
+          <mxGeometry y="60" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-67" target="vErNEw2Sg_INZIUIIfxX-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-67" value="ProductOptionColor" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="777.5" y="510" width="160" height="90" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-68" value="- colorId : Integer&#xa;- color : String&#xa;- productId : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-67">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-69" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-67">
+          <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="vErNEw2Sg_INZIUIIfxX-71" target="vErNEw2Sg_INZIUIIfxX-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-71" value="ProductMaxQuantity" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="510" width="160" height="90" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-72" value="- quantityId : Integer&#xa;- maxQuantity : Integer&#xa;- productId : Integer" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-71">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-73" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="vErNEw2Sg_INZIUIIfxX-71">
+          <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-74" value="共通" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="670" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vErNEw2Sg_INZIUIIfxX-75" value="topページ_商品詳細ページ表示" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;labelBackgroundColor=none;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="15" y="-50" width="215" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
