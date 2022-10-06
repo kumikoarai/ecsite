@@ -36,6 +36,7 @@ public class ProductServiceImpl implements ProductService {
 	private String username = "username";
 	private String password = "password";
 
+
 	private ChannelSftp setupJsch() throws JSchException {
 	    JSch jsch = new JSch();
 	    jsch.setKnownHosts("/home/vpsuser/.ssh/known_hosts");

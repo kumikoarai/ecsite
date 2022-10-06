@@ -71,6 +71,10 @@ fieldset {
 	margin: auto;
 }
 
+#btn-signup1 {
+	display: block;
+	margin: auto;
+}
 
 @media (max-width: 575px) {
 	#admin_section {
